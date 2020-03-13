@@ -9,4 +9,9 @@ public class Claymore extends Weapon {
     public int value() {
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return "Claymore";
+    }
 }

@@ -10,4 +10,8 @@ public class Longsword extends Weapon {
         return 0;
     }
 
+    @Override
+    public String toString() {
+        return "Longsword";
+    }
 }
