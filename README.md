@@ -120,3 +120,15 @@ a random number given the players accuracy(ACC) level.
 The idea of a boss fight is to acquire the loot which has a 100% drop rate but the fight is rather difficult. The players stats
 must be high enough to withstand the boss for the duration of the fight and come out victorious. 
 * Each boss has it's own special attack that will happen on the boss's first attack and again every 5th attack after that. 
+
+#Extras
+* RaNdOm EnCoUnTeRs?!
+
+* These will be extra random encounters that happen during the game rather than the mobs that you 
+find between towns. 
+
+* Possible Encounters
+    * Fall into a pit that leads to a maze/instance of loot
+    * Secret boss that has a random chance to fight you whenever(maybe a shade or Dhuum?).
+    * Stumble upon a cave that houses a bandit camp with potentially valuable loot. 
+    * If it's between the hours of 12AM and 6AM you can encounter a fight with a vampire.
