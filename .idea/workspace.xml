@@ -1,14 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1116e92f-8933-49c2-b624-45dff640fec3" name="Default Changelist" comment="" />
+    <list default="true" id="1116e92f-8933-49c2-b624-45dff640fec3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MainApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/SpecialAttack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/GameIO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/monster/Bandit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/monster/Basilisk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/monster/Cactuar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/monster/Djiin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/monster/Drowner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/monster/Goblin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/monster/Imp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/monster/Kobold.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/monster/Monster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/monster/Slime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/monster/Whelp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/trader/TraderCintra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/trader/TraderKaedwen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/trader/TraderNovigrad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/trader/TraderOxenfurt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/trader/TraderRedania.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/trader/TraderRivia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/trader/TraderTemeria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/npc/trader/TraderToussaint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/towns/Cintra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/towns/Inn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/towns/Kaedwen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/towns/Novigrad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/towns/Oxenfurt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/towns/Redania.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/towns/Rivia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/towns/Shop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/towns/SkillShop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/towns/Temeria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/towns/Toussaint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/npc/NPCTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/npc/monster/BanditTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/npc/monster/BasiliskTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/Attack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/Speak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/Speak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/npc/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/npc/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/npc/monster/Monster1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/npc/monster/Monster2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/npc/monster/Monster3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/npc/monster/Monster4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/npc/monster/Monster5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/npc/trader/Trader1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/npc/trader/Trader2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/npc/trader/Trader3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/npc/trader/Trader4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/npc/trader/Trader5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/towns/Town.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/towns/Town.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/towns/Town1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/towns/Town2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/towns/Town3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/towns/Town4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/towns/Town5.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1Z31bHoeEGv0U5nxAye7OzIzGXE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -18,7 +98,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="npc.monster" />
+      <recent name="com.zipcodewilmington.fallenchampions" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -30,7 +119,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584053034190</updated>
-      <workItem from="1584053039069" duration="60000" />
+      <workItem from="1584053039069" duration="1963000" />
+      <workItem from="1584103348231" duration="4113000" />
+      <workItem from="1584131583349" duration="144000" />
     </task>
     <servers />
   </component>
@@ -38,9 +129,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="141" y="50" key="SettingsEditor" timestamp="1584053122542">
+    <state x="285" y="-863" key="#Project_Structure" timestamp="1584053413078">
+      <screen x="-275" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="285" y="-863" key="#Project_Structure/0.23.1280.777/-275.-1057.1920.1057@-275.-1057.1920.1057" timestamp="1584053413078" />
+    <state x="453" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1584106345045">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
+    <state x="453" y="134" key="#com.intellij.ide.util.MemberChooser/0.23.1280.777@0.23.1280.777" timestamp="1584106345045" />
+    <state x="331" y="-596" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1584105346955">
+      <screen x="-275" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="331" y="-596" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1280.777/-275.-1057.1920.1057@-275.-1057.1920.1057" timestamp="1584105346955" />
+    <state x="406" y="278" width="467" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584105761433">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="406" y="278" width="467" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1280.777@0.23.1280.777" timestamp="1584105761433" />
+    <state x="473" y="-641" width="445" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1584105349572">
+      <screen x="-275" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="473" y="-641" width="445" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1280.777/-275.-1057.1920.1057@-275.-1057.1920.1057" timestamp="1584105349572" />
+    <state x="-125" y="-1020" key="SettingsEditor" timestamp="1584111023944">
+      <screen x="-337" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="-125" y="-1020" key="SettingsEditor/0.23.1280.727/-337.-1057.1920.1057@-337.-1057.1920.1057" timestamp="1584111023944" />
     <state x="141" y="50" key="SettingsEditor/0.23.1280.777/-275.-1057.1920.1057@0.23.1280.777" timestamp="1584053122542" />
   </component>
 </project>
