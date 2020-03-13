@@ -1,4 +1,6 @@
 package npc;
 
-public abstract class NPC {
+import interfaces.Speak;
+
+public abstract class NPC implements Speak {
 }
