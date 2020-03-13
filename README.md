@@ -5,9 +5,14 @@
 
 # Fallen Champions
 * Text / console based game built in java 8.  
-* Single player campaign style.  Player profiles can be saved and loaded.
-* To save the date you must sleep at an inn in town.  
-* There are no classes but player is based off of customization from attributes and skills.  
+* Single player campaign style.  The style of the game allows players to choose between options that will alter late 
+game decisions. 
+* Player profiles can be saved and loaded.
+* To save the game data, you must sleep at an Inn.
+The game will be loaded up from the respective Inn the last player slept at. 
+* There are no classes, but the current character is based off of customization from attributes and skills.
+For example, the user can spec into intelligence for mage like abilities or build up dex to act as a rogue and access rogue 
+skills.  
 * Leveling up is instant but you must go to a trainer in a town to spend your skill points and attribute points.  
 * Weapons and armors are acquirable through NPC drops and merchants.  
 * Travelling between towns leads to random encounters.  
