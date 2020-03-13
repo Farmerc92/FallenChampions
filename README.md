@@ -10,13 +10,14 @@ Glossary
 3. Traversing
 4. Inventory
 5. Items
-6. Combat
-7. Boss Fights
-8. Merchants
-9. Inns
-10. Random Events
-11. Quests???
-12. Extras
+6. Currency
+7. Combat
+8. Boss Fights
+9. Merchants
+10. Inns
+11. Random Events
+12. Quests???
+13. Extras
 
 #About
 
@@ -79,10 +80,21 @@ skills.
     * weapon
         * Damage(DMG)
         * RequiredLVL(Req.)
+        * Sell price
     * armor
         * Defense(DEF)
         * RequiredLVL(Req.)
+        * Sell price
         
+#Currency
+* The main currency in this game is coin. 
+* Three types of coin. 
+    1. Gold (1) = 100 Silver
+    2. Silver (1) = 100 Copper
+    3. Copper (1) = 1 Copper
+        
+* Currency can be acquired from killing monsters or selling goods to a merchant. 
+
 #Combat
 * Combat will be turn based combat giving the player options to choose from. The hit percentages will be based off of 
 a random number given the players accuracy(ACC) level. 
