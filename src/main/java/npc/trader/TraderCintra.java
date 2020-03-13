@@ -1,4 +1,9 @@
 package npc.trader;
 
-public class TraderCintra {
+import npc.NPC;
+
+public class TraderCintra extends NPC {
+    public String speak() {
+        return null;
+    }
 }

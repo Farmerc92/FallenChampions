@@ -1,9 +1,9 @@
 package player.weapons;
 
-public class Shortsword extends Weapon {
+public class Shortbow extends Weapon{
 
-    public Shortsword() {
-        attackPower = 2;
+    public Shortbow() {
+        attackPower = 1;
     }
 
     public int value() {
@@ -12,6 +12,6 @@ public class Shortsword extends Weapon {
 
     @Override
     public String toString() {
-        return "Shortsword";
+        return "Shortbow";
     }
 }
