@@ -1,4 +1,5 @@
-package towns.buildings;
+package towns;
 
 public class RuinsOfNilfgaard {
+
 }
