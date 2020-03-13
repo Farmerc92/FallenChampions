@@ -2,7 +2,7 @@ package player.weapons;
 
 public class Longsword extends Weapon {
 
-    public void Longsword() {
+    public Longsword() {
         attackPower = 3;
     }
 

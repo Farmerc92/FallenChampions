@@ -2,7 +2,7 @@ package player.weapons;
 
 public class Claymore extends Weapon {
 
-    public void Claymore() {
+    public Claymore() {
         attackPower = 5;
     }
 

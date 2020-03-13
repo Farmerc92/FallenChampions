@@ -1,4 +1,9 @@
 package npc.trader;
 
-public class TraderTemeria {
+import npc.NPC;
+
+public class TraderTemeria extends NPC {
+    public String speak() {
+        return null;
+    }
 }

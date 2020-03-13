@@ -2,7 +2,7 @@ package player.weapons;
 
 public class DeldrimorGreatSword extends Weapon {
 
-    public void DeldrimorGreatSword() {
+    public DeldrimorGreatSword() {
         attackPower = 25;
     }
 
