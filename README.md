@@ -44,6 +44,7 @@ skills.
         * Gold
         * Silver
         * Copper
+    * 20 open inventory slots to store items. 
 
 #Items
 * Each item that is found in the game(weapon and armor) will have stats. 
@@ -57,10 +58,30 @@ skills.
 #Combat
 * Combat will be turn based combat giving the player options to choose from. The hit percentages will be based off of 
 a random number given the players accuracy(ACC) level. 
+
+* While a player is traversing between towns, they will have a chance to encounter an enemy. The player will have two options;
+    1. Fight
+    2. Attempt to run
+        * If the attempt to run feature does not pass, the fight function will run. 
+        
+    How does combat work?
+    * The hitpoints(HP) and level of the monster will be displayed. 
+    * The player will choose an option from attack. 
+        * Use basic attack.
+            * This stems from the base damage of their weapon. 
+        * Use skill
+            * The player will be given an option of skills with the display of what the skill can do. 
+    * If the monster is defeated and any items drop, the user will have the option to pickup the items. There will be 
+    no instance where the user is hindered by weight. They will need to worry about inventory space. 
         
 #Traversing
-* Travelling between towns leads to random encounters.  
+* Travelling between towns leads to random encounters. See Combat section for more details. 
 * There are multiple ways to traverse from town 'a' to town 'b'.
+    * The overall map will look like a tree with different branches for towns. 
+        * For example, The first town will give you the option to lead to two towns('a' and 'b'). If the player chooses 'a'
+        they then have the option to go to 'c' and 'd' but they cannot go from 'c' to 'b'. The player will need to traverse
+        through the middle grounds between 'c' to 'a' to then access 'b'. To keep it short, there is not fast traveling in this
+        game... for now. 
 * Player has an armor slot and a weapon slot.  You start with a shirt and a club.  
 * There are bosses to defeat for loot!
 * The story is still being written.
