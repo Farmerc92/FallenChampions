@@ -4,6 +4,22 @@
 * Version 0.1
 
 # Fallen Champions
+Glossary
+1. About
+2. Classes
+3. Traversing
+4. Inventory
+5. Items
+6. Combat
+7. Boss Fights
+8. Merchants
+9. Inns
+10. Random Events
+11. Quests???
+12. Extras
+
+#About
+
 * Text / console based game built in java 8.  
 * Single player campaign style.  The style of the game allows players to choose between options that will alter late 
 game decisions. 
@@ -34,6 +50,18 @@ skills.
 * Weapons and armors are acquirable through NPC drops and merchants.
     * Items will have a chance to drop from mobs. 
     * Special items will be a guaranteed drop from bosses. 
+    
+#Traversing
+* Travelling between towns leads to random encounters. See Combat section for more details. 
+* There are multiple ways to traverse from town 'a' to town 'b'.
+    * The overall map will look like a tree with different branches for towns. 
+        * For example, The first town will give you the option to lead to two towns('a' and 'b'). If the player chooses 'a'
+        they then have the option to go to 'c' and 'd' but they cannot go from 'c' to 'b'. The player will need to traverse
+        through the middle grounds between 'c' to 'a' to then access 'b'. To keep it short, there is not fast traveling in this
+        game... for now. 
+* Player has an armor slot and a weapon slot.  You start with a shirt and a club.  
+* There are bosses to defeat for loot!
+* The story is still being written.
     
 #Inventory
 * Each character will have an inventory with the below. 
@@ -73,15 +101,10 @@ a random number given the players accuracy(ACC) level.
             * The player will be given an option of skills with the display of what the skill can do. 
     * If the monster is defeated and any items drop, the user will have the option to pickup the items. There will be 
     no instance where the user is hindered by weight. They will need to worry about inventory space. 
-        
-#Traversing
-* Travelling between towns leads to random encounters. See Combat section for more details. 
-* There are multiple ways to traverse from town 'a' to town 'b'.
-    * The overall map will look like a tree with different branches for towns. 
-        * For example, The first town will give you the option to lead to two towns('a' and 'b'). If the player chooses 'a'
-        they then have the option to go to 'c' and 'd' but they cannot go from 'c' to 'b'. The player will need to traverse
-        through the middle grounds between 'c' to 'a' to then access 'b'. To keep it short, there is not fast traveling in this
-        game... for now. 
-* Player has an armor slot and a weapon slot.  You start with a shirt and a club.  
-* There are bosses to defeat for loot!
-* The story is still being written.
+       
+
+#Boss Fights
+* Boss fights are encountered until the boss is defeated. Once the boss has been defeated, you cannot fight the boss again. 
+The idea of a boss fight is to acquire the loot which has a 100% drop rate but the fight is rather difficult. The players stats
+must be high enough to withstand the boss for the duration of the fight and come out victorious. 
+* Each boss has it's own special attack that will happen on the boss's first attack and again every 5th attack after that. 
