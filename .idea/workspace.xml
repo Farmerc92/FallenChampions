@@ -4,8 +4,6 @@
     <list default="true" id="1116e92f-8933-49c2-b624-45dff640fec3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/Attack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/Speak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/Speak.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584053034190</updated>
       <workItem from="1584053039069" duration="60000" />
-      <workItem from="1584104954600" duration="906000" />
+      <workItem from="1584104954600" duration="2240000" />
     </task>
     <servers />
   </component>
