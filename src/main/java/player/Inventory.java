@@ -9,30 +9,46 @@ import java.util.Map;
 
 public class Inventory<T> {
 
-    private ArrayList<Weapon> weapon;
-    private ArrayList<Armor> armor;
+    private ArrayList<Weapon> weaponList;
+    private ArrayList<Armor> armorList;
     private Map<T, Integer> inventoryItems;
 
     public Inventory() {
-        weapon = new ArrayList<>();
-        armor = new ArrayList<>();
+        weaponList = new ArrayList<>();
+        armorList = new ArrayList<>();
         inventoryItems = new HashMap<>();
     }
 
-    public ArrayList<Weapon> getWeapon() {
-        return weapon;
+    public ArrayList<Weapon> getWeaponList() {
+        return weaponList;
     }
 
-    public void setWeapon(ArrayList<Weapon> weapon) {
-        this.weapon = weapon;
+    public void setWeaponList(ArrayList<Weapon> weaponList) {
+        this.weaponList = weaponList;
     }
 
-    public ArrayList<Armor> getArmor() {
-        return armor;
+    public ArrayList<Armor> getArmorList() {
+        return armorList;
     }
 
-    public void setArmor(ArrayList<Armor> armor) {
-        this.armor = armor;
+    public void setArmorList(ArrayList<Armor> armorList) {
+        this.armorList = armorList;
+    }
+
+    public void addWeapon(Weapon weapon) {
+        weaponList.add(weapon);
+    }
+
+    public void removeWeapon(Weapon weapon) {
+        armorList.remove(weapon);
+    }
+
+    public void addArmor(Armor armor) {
+        armorList.add(armor);
+    }
+
+    public void removeArmor(Armor armor) {
+        armorList.remove(armor);
     }
 
     public Map<T, Integer> getInventoryItems() {

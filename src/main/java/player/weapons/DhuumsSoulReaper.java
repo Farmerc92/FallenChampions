@@ -2,8 +2,8 @@ package player.weapons;
 
 public class DhuumsSoulReaper extends Weapon {
 
-    public DhuumsSoulReaper() {
-        attackPower = 500;
+    public DhuumsSoulReaper(){
+        super(500);
     }
 
     public int value() {
