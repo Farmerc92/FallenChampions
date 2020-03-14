@@ -1,5 +1,7 @@
 package player;
 
+import locations.Location;
+import locations.areas.ElwynnForest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,7 +11,7 @@ public class PlayerTest {
 
     @Before
     public void setup() {
-        player = new Player();
+        player = new Player("");
     }
 
     @Test
@@ -85,6 +87,26 @@ public class PlayerTest {
     @Test
     public void testSetSkills() {
 
+    }
+
+    @Test
+    public void getNameTest(){
+        String expected = "";
+        String actual = player.getName();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getLocationTest(){
+        Location actual = player.getLocation();
+        Assert.assertNull(actual);
+    }
+
+    @Test
+    public void setLocationTest(){
+        Location expected = new ElwynnForest();
+        player.setLocation(expected);
+        Assert.assertEquals(expected, player.getLocation());
     }
 
 }

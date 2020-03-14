@@ -1,6 +1,7 @@
 package player;
 
 import interfaces.Attack;
+import locations.Location;
 import player.armors.Armor;
 import player.skills.Skills;
 import player.weapons.Weapon;
@@ -21,8 +22,11 @@ public class Player implements Attack {
     private Armor armor;
     private Weapon weapon;
     private List<Skills> skills;
+    private String name;
+    private Location location;
 
-    public Player(){
+    public Player(String name){
+        this.name = name;
         strength = 5;
         dexterity = 5;
         intelligence = 5;
@@ -32,6 +36,7 @@ public class Player implements Attack {
         inventory = new Inventory();
         level = 1;
         experience = 0;
+        location = null;
     }
 
     // God player for testing purposes
@@ -42,6 +47,21 @@ public class Player implements Attack {
         hp = 100000;
         mp = 100000;
         level  = 99;
+    }
+
+    public Player(String name, int strength, int dexterity, int intelligence, int hp, int mp, ArrayList<Skills> skills,
+                  Inventory inventory, int level, int experience, Location location){
+        this.name = name;
+        this.strength = strength;
+        this.dexterity = dexterity;
+        this.intelligence = intelligence;
+        this.hp = hp;
+        this.mp = mp;
+        this.skills = skills;
+        this.inventory = inventory;
+        this.level = level;
+        this.experience = experience;
+        this.location = location;
     }
 
     public int getStrength() {
@@ -126,6 +146,18 @@ public class Player implements Attack {
 
     public void setExperience(int experience) {
         this.experience = experience;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
     @Override

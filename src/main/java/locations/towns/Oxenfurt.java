@@ -1,4 +1,4 @@
-package towns;
+package locations.towns;
 
 public class Oxenfurt extends Town {
 }
