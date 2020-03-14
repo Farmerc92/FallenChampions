@@ -111,6 +111,22 @@ public class Player implements Attack {
         this.skills = skills;
     }
 
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public int getExperience() {
+        return experience;
+    }
+
+    public void setExperience(int experience) {
+        this.experience = experience;
+    }
+
     @Override
     public int attack() {
         return weapon.getAttackPower() + strength;
