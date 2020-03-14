@@ -3,7 +3,7 @@ package player.armors;
 import player.Value;
 
 public abstract class Armor implements Value {
-    private int defenseRating;
+    protected int defenseRating;
 
     public Armor(int defenseRating) {
         this.defenseRating = defenseRating;
