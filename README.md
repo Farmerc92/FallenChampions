@@ -43,7 +43,7 @@ skills.
     4. Accuracy(ACC)
     5. Hitpoints(HP)
     6. Mana(MANA))
-* Leveling up is instant but you must go to a trainer in a town to spend your skill and attribute points. 
+* Leveling up is instant but you must go to a trainer in a locations to spend your skill and attribute points. 
     * On level up, the player will be rewarded 1 skill point and 2 attribute points.  
     
 * Player level will cap at 60. 
@@ -53,10 +53,10 @@ skills.
     * Special items will be a guaranteed drop from bosses. 
     
 #Traversing
-* Travelling between towns leads to random encounters. See Combat section for more details. 
-* There are multiple ways to traverse from town 'a' to town 'b'.
-    * The overall map will look like a tree with different branches for towns. 
-        * For example, The first town will give you the option to lead to two towns('a' and 'b'). If the player chooses 'a'
+* Travelling between locations leads to random encounters. See Combat section for more details. 
+* There are multiple ways to traverse from locations 'a' to locations 'b'.
+    * The overall map will look like a tree with different branches for locations. 
+        * For example, The first locations will give you the option to lead to two locations('a' and 'b'). If the player chooses 'a'
         they then have the option to go to 'c' and 'd' but they cannot go from 'c' to 'b'. The player will need to traverse
         through the middle grounds between 'c' to 'a' to then access 'b'. To keep it short, there is not fast traveling in this
         game... for now. 
@@ -99,7 +99,7 @@ skills.
 * Combat will be turn based combat giving the player options to choose from. The hit percentages will be based off of 
 a random number given the players accuracy(ACC) level. 
 
-* While a player is traversing between towns, they will have a chance to encounter an enemy. The player will have two options;
+* While a player is traversing between locations, they will have a chance to encounter an enemy. The player will have two options;
     1. Fight
     2. Attempt to run
         * If the attempt to run feature does not pass, the fight function will run. 
@@ -125,7 +125,7 @@ must be high enough to withstand the boss for the duration of the fight and come
 * RaNdOm EnCoUnTeRs?!
 
 * These will be extra random encounters that happen during the game rather than the mobs that you 
-find between towns. 
+find between locations. 
 
 * Possible Encounters
     * Fall into a pit that leads to a maze/instance of loot
