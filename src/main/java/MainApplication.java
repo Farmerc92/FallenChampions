@@ -4,6 +4,8 @@ import locations.towns.*;
 import player.Player;
 import player.SaveFiles;
 
+import static sun.jvm.hotspot.runtime.PerfMemory.start;
+
 public class MainApplication {
     private Cintra cintra = new Cintra();
     private Kaedwen kaedwen = new Kaedwen();
@@ -31,12 +33,26 @@ public class MainApplication {
 
     private static void choosePlayer() {
         System.out.println(saveFiles.toString());
-
+        Integer choice = playerIO.getIntegerInput("Enter your save file number.");
+        if (saveFiles.contains(choice)) {
+            player = saveFiles.get(choice);
+            beginning();
+        }
+        else
+            System.out.println("That save file number does not exist.");
+        intro();
     }
 
     private static void createPlayer() {
         String name = playerIO.getStringInput("What is the name of our hero?");
         player = new Player(name);
+        saveFiles.add(player);
+        saveFiles.save();
+        beginning();
+    }
+
+    private static void beginning() {
+        System.out.println("We did it!");
     }
 
     public static void main(String[] args){
