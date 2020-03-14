@@ -2,6 +2,7 @@ package player;
 
 import interfaces.Attack;
 import player.armors.Armor;
+import player.skills.Skills;
 import player.weapons.Weapon;
 
 import java.util.ArrayList;
