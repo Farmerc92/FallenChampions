@@ -56,7 +56,7 @@ public class InventoryTest {
         inv.addArmor(armor);
         inv.removeArmor(armor);
         int armorSize = inv.getArmorList().size();
-        Assert.assertEquals(1, armorSize);
+        Assert.assertEquals(0, armorSize);
     }
 
 }

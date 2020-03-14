@@ -4,10 +4,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class CoinPouch {
-    Map<Currency, Integer> mapOfCoin;
-    Copper copper = new Copper();
-    Silver silver = new Silver();
-    Gold gold = new Gold();
+    protected Map<Currency, Integer> mapOfCoin;
+    protected Copper copper = new Copper();
+    protected Silver silver = new Silver();
+    protected Gold gold = new Gold();
 
     public CoinPouch() {
         mapOfCoin = new LinkedHashMap<>();

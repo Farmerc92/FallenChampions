@@ -12,6 +12,6 @@ public class DeldrimorGreatSword extends Weapon {
 
     @Override
     public String toString() {
-        return "Deldrimor GreatSword";
+        return "Deldrimor Greatsword";
     }
 }
