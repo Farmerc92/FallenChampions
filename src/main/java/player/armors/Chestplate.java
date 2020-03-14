@@ -1,8 +1,8 @@
-package player.weapons;
+package player.armors;
 
-public class Crossbow extends Weapon {
+public class Chestplate extends Armor{
 
-    public Crossbow() {
+    public Chestplate() {
         super(2);
     }
 
@@ -12,6 +12,6 @@ public class Crossbow extends Weapon {
 
     @Override
     public String toString() {
-        return "Crossbow";
+        return "Chestplate";
     }
 }

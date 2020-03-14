@@ -19,8 +19,8 @@ public class PlayerTest {
         Assert.assertEquals(5, player.getIntelligence());
         Assert.assertEquals(10, player.getHp());
         Assert.assertEquals(10, player.getMp());
-        Assert.assertEquals(0, player.getInventory().getArmor().size());
-        Assert.assertEquals(0, player.getInventory().getWeapon().size());
+        Assert.assertEquals(0, player.getInventory().getArmorList().size());
+        Assert.assertEquals(0, player.getInventory().getWeaponList().size());
         Assert.assertEquals(1, player.getLevel());
         Assert.assertEquals(0, player.getExperience());
     }

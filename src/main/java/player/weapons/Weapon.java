@@ -5,7 +5,7 @@ import player.Value;
 public abstract class Weapon implements Value {
     protected int attackPower;
 
-    public void Weapon(int attackPower) {
+    public Weapon(int attackPower) {
         this.attackPower = attackPower;
     }
 
