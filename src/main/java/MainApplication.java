@@ -4,8 +4,6 @@ import locations.towns.*;
 import player.Player;
 import player.SaveFiles;
 
-import static sun.jvm.hotspot.runtime.PerfMemory.start;
-
 public class MainApplication {
     private Cintra cintra = new Cintra();
     private Kaedwen kaedwen = new Kaedwen();
