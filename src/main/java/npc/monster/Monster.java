@@ -1,7 +1,11 @@
 package npc.monster;
 
+import Money.Coin;
 import interfaces.Attack;
 import npc.NPC;
+import npc.monster.drops.Dropable;
+
+import java.util.Random;
 
 public abstract class Monster extends NPC implements Attack {
     protected int HP;
@@ -9,15 +13,22 @@ public abstract class Monster extends NPC implements Attack {
     protected int Dexterity;
     protected int Intelligence;
     protected int level;
+    protected int xpDrop;
 
-    public Monster(int HP, int strength, int dexterity, int intelligence, int level) {
+    protected Monster(int HP, int strength, int dexterity, int intelligence, int level) {
         this.HP = HP;
         this.level = level;
         Strength = strength;
         Dexterity = dexterity;
         Intelligence = intelligence;
     }
-    public Integer xpDrop(){
-     return null;
+
+    public int getXpDrop() {
+        return xpDrop;
     }
+
+    public void setXpDrop() {
+        this.xpDrop = this.HP * 2;
+    }
+
 }

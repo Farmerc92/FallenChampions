@@ -1,6 +1,7 @@
 package Money;
 
-public enum Coin {
+
+public enum Coin{
     GOLD(1),
     SILVER(1),
     COPPER(1);

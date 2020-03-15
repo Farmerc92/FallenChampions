@@ -10,7 +10,7 @@ public class Whelp extends Monster {
     }
 
     public String speak() {
-        return null;
+        return "Kreeeeee!";
     }
 
     public int attack() {

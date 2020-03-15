@@ -15,6 +15,6 @@ public class Basilisk extends Monster {
     }
 
     public String speak() {
-        return null;
+        return "Grrrrrrrrr";
     }
 }

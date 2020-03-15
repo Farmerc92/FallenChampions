@@ -11,7 +11,7 @@ public class Kobold extends Monster {
     }
 
     public String speak() {
-        return null;
+        return "You no take candle!";
     }
 
     public int attack() {

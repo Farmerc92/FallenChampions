@@ -1,9 +1,11 @@
 package npc.monster;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class BanditTest {
+
 
     @Test
     public void testAttack() {
@@ -16,6 +18,22 @@ public class BanditTest {
     }
 
     @Test
-    public void test(){
+    public  void testSpeak(){
+        Bandit bandit = new Bandit(15, 3, 5, 1, 3);
+        String expected = "Give me all your stuffs!";
+        String actual = bandit.speak();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testXpDrop(){
+        Bandit bandit = new Bandit(15, 3, 5, 1, 3);
+        int expected = 30;
+        bandit.setXpDrop();
+        int actual = bandit.getXpDrop();
+
+        Assert.assertEquals(expected, actual);
+
     }
 }
