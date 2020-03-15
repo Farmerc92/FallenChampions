@@ -7,31 +7,28 @@ import org.junit.Test;
 public class MoneyTest {
 
     CoinPouch coinPouch;
-    Copper copper;
-    Silver silver;
-    Gold gold;
+    Coin copperCoin = Coin.COPPER;
+    Coin silverCoin = Coin.SILVER;
+    Coin goldCoin = Coin.GOLD;
 
     @Before
     public void setup() {
         coinPouch = new CoinPouch();
-        copper = new Copper();
-        silver = new Silver();
-        gold = new Gold();
     }
 
     @Test
     public void testCopperConstructor() {
-        Assert.assertEquals(1, copper.getValue());
+        Assert.assertEquals(1, copperCoin.getValue());
     }
 
     @Test
     public void testSilverConstructor() {
-        Assert.assertEquals(1, silver.getValue());
+        Assert.assertEquals(1, silverCoin.getValue());
     }
 
     @Test
     public void testGoldConstructor() {
-        Assert.assertEquals(1, gold.getValue());
+        Assert.assertEquals(1, goldCoin.getValue());
     }
 
     @Test
@@ -42,8 +39,8 @@ public class MoneyTest {
 
     @Test
     public void testAddCopper() {
-        coinPouch.addCurrency(copper, 10);
-        coinPouch.addCurrency(copper, 20);
+        coinPouch.addCurrency(copperCoin, 10);
+        coinPouch.addCurrency(copperCoin, 20);
         coinPouch.getCoins();
         int actualAmountOfCopper = coinPouch.getCopper();
         Assert.assertEquals(30, actualAmountOfCopper);
@@ -51,7 +48,7 @@ public class MoneyTest {
 
     @Test
     public void testAddSilver() {
-        coinPouch.addCurrency(silver, 10);
+        coinPouch.addCurrency(silverCoin, 10);
         coinPouch.getCoins();
         int actualAmountOfSilver = coinPouch.getSilver();
         Assert.assertEquals(10, actualAmountOfSilver);
@@ -59,7 +56,7 @@ public class MoneyTest {
 
     @Test
     public void testAddGold() {
-        coinPouch.addCurrency(gold, 20);
+        coinPouch.addCurrency(goldCoin, 20);
         coinPouch.getCoins();
         int actualAmountOfGold = coinPouch.getGold();
         Assert.assertEquals(20, actualAmountOfGold);
@@ -67,9 +64,9 @@ public class MoneyTest {
 
     @Test
     public void testAddAllThreeCurrencies() {
-        coinPouch.addCurrency(copper, 76);
-        coinPouch.addCurrency(silver, 32);
-        coinPouch.addCurrency(gold, 2);
+        coinPouch.addCurrency(copperCoin, 76);
+        coinPouch.addCurrency(silverCoin, 32);
+        coinPouch.addCurrency(goldCoin, 2);
         coinPouch.getCoins();
         int actualAmountOfCopper = coinPouch.getCopper();
         int actualAmountOfSilver = coinPouch.getSilver();
@@ -82,7 +79,7 @@ public class MoneyTest {
 
     @Test
     public void testCopperOverload() {
-        coinPouch.addCurrency(copper, 230);
+        coinPouch.addCurrency(copperCoin, 230);
         coinPouch.getCoins();
         coinPouch.fixCoin();
         coinPouch.getCoins();
@@ -96,7 +93,7 @@ public class MoneyTest {
 
     @Test
     public void testCopperMegaOverload() {
-        coinPouch.addCurrency(copper, 23472);
+        coinPouch.addCurrency(copperCoin, 23472);
         coinPouch.getCoins();
         coinPouch.fixCoin();
         coinPouch.getCoins();
@@ -112,7 +109,7 @@ public class MoneyTest {
 
     @Test
     public void testSilverOverload() {
-        coinPouch.addCurrency(silver, 305);
+        coinPouch.addCurrency(silverCoin, 305);
         coinPouch.getCoins();
         coinPouch.fixCoin();
         coinPouch.getCoins();
@@ -126,7 +123,7 @@ public class MoneyTest {
 
     @Test
     public void testSilverMegaOverload() {
-        coinPouch.addCurrency(silver, 1002);
+        coinPouch.addCurrency(silverCoin, 1002);
         coinPouch.getCoins();
         coinPouch.fixCoin();
         coinPouch.getCoins();
@@ -140,9 +137,9 @@ public class MoneyTest {
 
     @Test
     public void testRandomAdded() {
-        coinPouch.addCurrency(copper, 105);
-        coinPouch.addCurrency(silver, 15);
-        coinPouch.addCurrency(gold, 2);
+        coinPouch.addCurrency(copperCoin, 105);
+        coinPouch.addCurrency(silverCoin, 15);
+        coinPouch.addCurrency(goldCoin, 2);
         coinPouch.getCoins();
         coinPouch.fixCoin();
         coinPouch.getCoins();
@@ -158,9 +155,9 @@ public class MoneyTest {
 
     @Test
     public void testRandomAddedAgain() {
-        coinPouch.addCurrency(copper, 105);
-        coinPouch.addCurrency(silver, 107);
-        coinPouch.addCurrency(gold, 2);
+        coinPouch.addCurrency(copperCoin, 105);
+        coinPouch.addCurrency(silverCoin, 107);
+        coinPouch.addCurrency(goldCoin, 2);
         coinPouch.getCoins();
         coinPouch.fixCoin();
         coinPouch.getCoins();
