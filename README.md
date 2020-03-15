@@ -19,8 +19,7 @@ Glossary
 12. Quests???
 13. Extras
 
-#About
-
+# About
 * Text / console based game built in java 8.  
 * Single player campaign style.  The style of the game allows players to choose between options that will alter late 
 game decisions. 
@@ -28,7 +27,7 @@ game decisions.
 * To save the game data, you must sleep at an Inn.
 The game will be loaded up from the respective Inn the player slept at. 
 
-#Classes
+# Classes
 * There are no classes, but the current character is based off of customization from attributes and skills.
 For example, the user can spec into intelligence for mage like abilities or build up dex to act as a rogue and access rogue 
 skills.  
@@ -52,7 +51,7 @@ skills.
     * Items will have a chance to drop from mobs. 
     * Special items will be a guaranteed drop from bosses. 
     
-#Traversing
+# Traversing
 * Travelling between locations leads to random encounters. See Combat section for more details. 
 * There are multiple ways to traverse from locations 'a' to locations 'b'.
     * The overall map will look like a tree with different branches for locations. 
@@ -75,7 +74,7 @@ skills.
         * Copper
     * 20 open inventory slots to store items. 
 
-#Items
+# Items
 * Each item that is found in the game(weapon and armor) will have stats. 
     * weapon
         * Damage(DMG)
@@ -86,7 +85,7 @@ skills.
         * RequiredLVL(Req.)
         * Sell price
         
-#Currency
+# Currency
 * The main currency in this game is coin. 
 * Three types of coin. 
     1. Gold (1) = 100 Silver
@@ -95,7 +94,7 @@ skills.
         
 * Currency can be acquired from killing monsters or selling goods to a merchant. 
 
-#Combat
+# Combat
 * Combat will be turn based combat giving the player options to choose from. The hit percentages will be based off of 
 a random number given the players accuracy(ACC) level. 
 
@@ -115,13 +114,13 @@ a random number given the players accuracy(ACC) level.
     no instance where the user is hindered by weight. They will need to worry about inventory space. 
        
 
-#Boss Fights
+# Boss Fights
 * Boss fights are encountered until the boss is defeated. Once the boss has been defeated, you cannot fight the boss again. 
 The idea of a boss fight is to acquire the loot which has a 100% drop rate but the fight is rather difficult. The players stats
 must be high enough to withstand the boss for the duration of the fight and come out victorious. 
 * Each boss has it's own special attack that will happen on the boss's first attack and again every 5th attack after that. 
 
-#Extras
+# Extras
 * RaNdOm EnCoUnTeRs?!
 
 * These will be extra random encounters that happen during the game rather than the mobs that you 
