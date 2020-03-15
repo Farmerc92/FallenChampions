@@ -19,6 +19,4 @@ public class Bandit extends Monster implements Dropable {
     public String speak() {
         return "Give me all your stuffs!";
     }
-
-
 }

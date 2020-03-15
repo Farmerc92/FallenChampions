@@ -1,7 +1,11 @@
 package npc.monster;
 
+import Money.Coin;
 import interfaces.Attack;
 import npc.NPC;
+import npc.monster.drops.Dropable;
+
+import java.util.Random;
 
 public abstract class Monster extends NPC implements Attack {
     protected int HP;
@@ -26,4 +30,5 @@ public abstract class Monster extends NPC implements Attack {
     public void setXpDrop() {
         this.xpDrop = this.HP * 2;
     }
+
 }
