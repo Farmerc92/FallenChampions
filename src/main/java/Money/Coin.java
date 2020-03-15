@@ -1,7 +1,9 @@
 package Money;
 
 
-public enum Coin{
+import npc.monster.drops.Dropable;
+
+public enum Coin implements Dropable {
     GOLD(1),
     SILVER(1),
     COPPER(1);
