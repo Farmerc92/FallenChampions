@@ -63,7 +63,7 @@ skills.
 * There are bosses to defeat for loot!
 * The story is still being written.
     
-#Inventory
+# Inventory
 * Each character will have an inventory with the below. 
     * Each player will have two slots in their inventory for gear. 
         * One for armor
