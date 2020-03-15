@@ -109,4 +109,65 @@ public class PlayerTest {
         Assert.assertEquals(expected, player.getLocation());
     }
 
+    @Test
+    public void getCurrentHpTest(){
+        int expected = player.getCurrentHp();
+        int actual = 10;
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getCurrentMpTest(){
+        int expected = player.getCurrentMp();
+        int actual = 10;
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void useManaTest(){
+        int cost = 5;
+        int actual = 5;
+        player.useMana(cost);
+        int expected = player.getCurrentMp();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void restoreMpTest(){
+        int cost = 5;
+        int actualBefore = player.getHp() - cost;
+        player.useMana(cost);
+        int expectedBefore = player.getCurrentMp();
+        player.restoreMp();
+        int actualAfter = 10;
+        int expectedAfter = player.getCurrentMp();
+        Assert.assertEquals(actualBefore, expectedBefore);
+        Assert.assertEquals(actualAfter, expectedAfter);
+    }
+
+    @Test
+    public void restoreHpTest(){
+        int damage = 5;
+        int actualBefore = player.getHp() - damage;
+        player.takeDamage(damage);
+        int expectedBefore = player.getCurrentHp();
+        player.restoreHp();
+        int actualAfter = 10;
+        int expectedAfter = player.getCurrentHp();
+        Assert.assertEquals(actualBefore, expectedBefore);
+        Assert.assertEquals(actualAfter, expectedAfter);
+    }
+
+    @Test
+    public void takeDamageTest(){
+        int damage = 5;
+        int actual = player.getHp() - damage;
+        player.takeDamage(damage);
+        int expected = player.getCurrentHp();
+        Assert.assertEquals(actual, expected);
+    }
+
 }

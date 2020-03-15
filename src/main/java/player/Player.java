@@ -128,7 +128,7 @@ public class Player implements Attack {
 
     public int getCurrentHp() { return currentHp; }
 
-    public void fullHp() { this.currentHp = hp; }
+    public void restoreHp() { this.currentHp = hp; }
 
     public void takeDamage(int damage) { currentHp -= damage; }
 
@@ -140,7 +140,7 @@ public class Player implements Attack {
 
     public int getCurrentMp() { return currentMp; }
 
-    public void fullMp() { currentMp = mp; }
+    public void restoreMp() { currentMp = mp; }
 
     public void useMana(int cost) { currentMp -= cost; }
 
@@ -166,10 +166,6 @@ public class Player implements Attack {
 
     public List<Skills> getSkills() {
         return skills;
-    }
-
-    public void setSkills(List<Skills> skills) {
-        this.skills = skills;
     }
 
     public int getLevel() {
