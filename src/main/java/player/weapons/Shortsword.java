@@ -6,6 +6,7 @@ public class Shortsword extends Weapon {
         super(2);
     }
 
+    @Override
     public int value() {
         return 0;
     }

@@ -6,6 +6,7 @@ public class Staff extends Weapon {
         super(1);
     }
 
+    @Override
     public int value() {
         return 0;
     }

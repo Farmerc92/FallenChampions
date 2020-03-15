@@ -1,9 +1,9 @@
 package player.armors;
 
-public class Chestplate extends Armor{
+public class ChainMail extends Armor{
 
-    public Chestplate() {
-        super(2);
+    public ChainMail() {
+        super(3);
     }
 
     @Override
@@ -13,6 +13,6 @@ public class Chestplate extends Armor{
 
     @Override
     public String toString() {
-        return "Chestplate";
+        return "Chain Mail";
     }
 }

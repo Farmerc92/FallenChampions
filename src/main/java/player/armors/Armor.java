@@ -1,6 +1,6 @@
 package player.armors;
 
-import player.Value;
+import interfaces.Value;
 
 public abstract class Armor implements Value {
     protected int defenseRating;

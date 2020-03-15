@@ -1,6 +1,6 @@
 package player.weapons;
 
-import player.Value;
+import interfaces.Value;
 
 public abstract class Weapon implements Value {
     protected int attackPower;

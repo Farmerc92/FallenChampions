@@ -1,10 +1,7 @@
 package player.armors;
 
-public class Chestplate extends Armor{
-
-    public Chestplate() {
-        super(2);
-    }
+public class GreenDHide extends Armor{
+    public GreenDHide() { super(20);}
 
     @Override
     public int value() {
@@ -13,6 +10,7 @@ public class Chestplate extends Armor{
 
     @Override
     public String toString() {
-        return "Chestplate";
+        return "Green d'hide";
     }
+
 }

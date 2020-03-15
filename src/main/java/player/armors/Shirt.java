@@ -1,8 +1,8 @@
-package player.weapons;
+package player.armors;
 
-public class Shortbow extends Weapon{
+public class Shirt extends Armor {
 
-    public Shortbow() {
+    public Shirt() {
         super(1);
     }
 
@@ -13,6 +13,6 @@ public class Shortbow extends Weapon{
 
     @Override
     public String toString() {
-        return "Shortbow";
+        return "Shirt";
     }
 }

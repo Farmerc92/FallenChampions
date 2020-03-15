@@ -1,10 +1,8 @@
 package player.armors;
 
-public class Chestplate extends Armor{
+public class Robes extends Armor{
 
-    public Chestplate() {
-        super(2);
-    }
+    public Robes () { super(3); }
 
     @Override
     public int value() {
@@ -13,6 +11,6 @@ public class Chestplate extends Armor{
 
     @Override
     public String toString() {
-        return "Chestplate";
+        return "Robes";
     }
 }
