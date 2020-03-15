@@ -1,11 +1,9 @@
 package Money;
 
 public class Gold extends Currency {
-    int value = 1;
+    private int value = 1;
 
-    public Gold() {
-
-    }
+    public Gold() { }
 
     public int getValue() {
         return value;

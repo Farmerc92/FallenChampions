@@ -1,18 +1,16 @@
 package Money;
 
 public class Silver extends Currency{
-    int Value = 1;
+    private int value = 1;
 
-    public Silver() {
-
-    }
+    public Silver() { }
 
     public int getValue() {
-        return Value;
+        return value;
     }
 
     public void setValue(int value) {
-        Value = value;
+        value = value;
     }
 
     @Override

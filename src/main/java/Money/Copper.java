@@ -1,11 +1,9 @@
 package Money;
 
 public class Copper extends Currency{
-    int value = 1;
+    private int value = 1;
 
-    public Copper() {
-
-    }
+    public Copper() { }
 
     public int getValue() {
         return value;
