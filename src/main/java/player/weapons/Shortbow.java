@@ -8,6 +8,7 @@ public class Shortbow extends Weapon{
         super(1);
     }
 
+    @Override
     public int value() {
         return 0;
     }

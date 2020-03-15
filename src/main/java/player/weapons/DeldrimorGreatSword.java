@@ -8,6 +8,7 @@ public class DeldrimorGreatSword extends Weapon {
         super(25);
     }
 
+    @Override
     public int value() {
         return 0;
     }

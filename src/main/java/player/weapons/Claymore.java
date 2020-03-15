@@ -6,6 +6,7 @@ public class Claymore extends Weapon {
         super(5);
     }
 
+    @Override
     public int value() {
         return 0;
     }
