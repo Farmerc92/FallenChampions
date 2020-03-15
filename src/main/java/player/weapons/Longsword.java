@@ -8,6 +8,7 @@ public class Longsword extends Weapon {
         super(3);
     }
 
+    @Override
     public int value() {
         return 0;
     }

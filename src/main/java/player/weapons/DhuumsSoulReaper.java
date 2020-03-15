@@ -8,6 +8,7 @@ public class DhuumsSoulReaper extends Weapon {
         super(500);
     }
 
+    @Override
     public int value() {
         return 0;
     }

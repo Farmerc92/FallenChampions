@@ -1,5 +1,6 @@
 package player;
 
+import interfaces.Value;
 import org.junit.Assert;
 import org.junit.Test;
 import player.weapons.*;

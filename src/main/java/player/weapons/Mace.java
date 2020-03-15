@@ -8,6 +8,7 @@ public class Mace extends Weapon {
         super(4);
     }
 
+    @Override
     public int value() {
         return 0;
     }

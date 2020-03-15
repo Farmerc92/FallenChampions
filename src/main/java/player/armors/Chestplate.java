@@ -9,6 +9,7 @@ public class Chestplate extends Armor{
         super(2);
     }
 
+    @Override
     public int value() {
         return 0;
     }
