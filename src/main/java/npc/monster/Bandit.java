@@ -15,6 +15,8 @@ public class Bandit extends Monster {
     }
 
     public String speak() {
-        return null;
+        return "Give me all your stuffs!";
     }
+
+
 }

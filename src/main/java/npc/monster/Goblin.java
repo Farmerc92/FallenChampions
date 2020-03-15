@@ -11,7 +11,7 @@ public class Goblin extends Monster {
     }
 
     public String speak() {
-        return null;
+        return "My precious!";
     }
 
     public int attack() {
