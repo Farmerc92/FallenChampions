@@ -4,31 +4,32 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class CoinPouch {
-    protected Map<Currency, Integer> mapOfCoin;
-    protected Copper copper = new Copper();
-    protected Silver silver = new Silver();
-    protected Gold gold = new Gold();
+    protected Map<Coin, Integer> mapOfCoin;
+
+    protected Coin copperCoin = Coin.COPPER;
+    protected Coin silverCoin = Coin.SILVER;
+    protected Coin goldCoin = Coin.GOLD;
 
     public CoinPouch() {
         mapOfCoin = new LinkedHashMap<>();
-        mapOfCoin.put(gold, 0);
-        mapOfCoin.put(silver, 0);
-        mapOfCoin.put(copper, 0);
+        mapOfCoin.put(goldCoin, 0);
+        mapOfCoin.put(silverCoin, 0);
+        mapOfCoin.put(copperCoin, 0);
     }
 
-    public void addCurrency(Currency currencyToAdd, Integer amountOfCurrency) {
-        if (currencyToAdd instanceof Copper) {
-            mapOfCoin.put(copper, mapOfCoin.get(copper) + amountOfCurrency);
-        } else if (currencyToAdd instanceof Silver) {
-            mapOfCoin.put(silver, mapOfCoin.get(silver) + amountOfCurrency);
+    public void addCurrency(Coin currencyToAdd, Integer amountOfCurrency) {
+        if (currencyToAdd.equals(copperCoin)) {
+            mapOfCoin.put(copperCoin, mapOfCoin.get(copperCoin) + amountOfCurrency);
+        } else if (currencyToAdd.equals(silverCoin)) {
+            mapOfCoin.put(silverCoin, mapOfCoin.get(silverCoin) + amountOfCurrency);
         } else {
-            mapOfCoin.put(gold, mapOfCoin.get(gold) + amountOfCurrency);
+            mapOfCoin.put(goldCoin, mapOfCoin.get(goldCoin) + amountOfCurrency);
         }
     }
 
     public String getCoins() {
         String stringOfCoins = "";
-        for (Map.Entry<Currency, Integer> coin : mapOfCoin.entrySet()) {
+        for (Map.Entry<Coin, Integer> coin : mapOfCoin.entrySet()) {
             stringOfCoins += coin.getKey().toString()+ ": ";
             stringOfCoins += coin.getValue().toString() + " ";
         }
@@ -37,20 +38,20 @@ public class CoinPouch {
     }
 
     public void fixCopper() {
-        if (mapOfCoin.get(copper) > 99) {
-            Integer copperResult = mapOfCoin.get(copper) / 100;
-            Integer leftOverCopper = mapOfCoin.get(copper) - (100 * copperResult);
-            mapOfCoin.replace(silver, copperResult + mapOfCoin.get(silver));
-            mapOfCoin.replace(copper, leftOverCopper);
+        if (mapOfCoin.get(copperCoin) > 99) {
+            Integer copperResult = mapOfCoin.get(copperCoin) / 100;
+            Integer leftOverCopper = mapOfCoin.get(copperCoin) - (100 * copperResult);
+            mapOfCoin.replace(silverCoin, copperResult + mapOfCoin.get(silverCoin));
+            mapOfCoin.replace(copperCoin, leftOverCopper);
         }
     }
 
     public void fixSilver() {
-        if (mapOfCoin.get(silver) > 99) {
-            Integer silverResult = mapOfCoin.get(silver) / 100;
-            Integer leftOverSilver = mapOfCoin.get(silver) - (100 * silverResult);
-            mapOfCoin.replace(gold, silverResult + mapOfCoin.get(gold));
-            mapOfCoin.replace(silver, leftOverSilver);
+        if (mapOfCoin.get(silverCoin) > 99) {
+            Integer silverResult = mapOfCoin.get(silverCoin) / 100;
+            Integer leftOverSilver = mapOfCoin.get(silverCoin) - (100 * silverResult);
+            mapOfCoin.replace(goldCoin, silverResult + mapOfCoin.get(goldCoin));
+            mapOfCoin.replace(silverCoin, leftOverSilver);
         }
     }
 
@@ -60,15 +61,15 @@ public class CoinPouch {
     }
 
     public Integer getCopper() {
-        return mapOfCoin.get(copper);
+        return mapOfCoin.get(copperCoin);
     }
 
     public Integer getSilver() {
-        return mapOfCoin.get(silver);
+        return mapOfCoin.get(silverCoin);
     }
 
     public Integer getGold() {
-        return mapOfCoin.get(gold);
+        return mapOfCoin.get(goldCoin);
     }
 
 }
