@@ -1,5 +1,8 @@
 package player.armors;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Chestplate extends Armor{
 
     public Chestplate() {

@@ -1,7 +1,9 @@
 package player.weapons;
 
-public class Shortsword extends Weapon {
+import com.fasterxml.jackson.annotation.JsonCreator;
 
+public class Shortsword extends Weapon {
+    @JsonCreator
     public Shortsword() {
         super(2);
     }
