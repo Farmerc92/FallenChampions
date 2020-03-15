@@ -23,7 +23,11 @@ public class MainApplication {
         if (newOrLoad == 1)
             createPlayer();
         else if (newOrLoad == 2)
-            choosePlayer();
+            if (!saveFiles.isEmpty())
+                choosePlayer();
+            else {
+                System.out.println("No save files found.\nYou will not be redirected to New Game.\n");
+                createPlayer(); }
         else
             System.out.println("\nPlease Enter 1 or 2.\n");
             intro();
@@ -51,6 +55,7 @@ public class MainApplication {
 
     private static void beginning() {
         System.out.println("We did it!");
+        System.exit(0);
     }
 
     public static void main(String[] args){

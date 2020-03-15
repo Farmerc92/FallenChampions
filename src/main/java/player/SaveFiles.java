@@ -2,6 +2,7 @@ package player;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,6 +26,8 @@ public class SaveFiles {
         try {
             saves = objectMapper.readValue(new File("saves.json"), new TypeReference<HashMap<Integer, Player>>() {
             });
+        } catch (MismatchedInputException e) {
+            System.out.println("No Load files found.\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -36,6 +39,8 @@ public class SaveFiles {
         try {
             saves = objectMapper.readValue(new File("savesTest.json"), new TypeReference<HashMap<Integer, Player>>() {
             });
+        } catch (MismatchedInputException e) {
+            System.out.println("No Load files found.");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -70,6 +75,10 @@ public class SaveFiles {
 
     public Player get(Integer id){
         return saves.get(id);
+    }
+
+    public boolean isEmpty(){
+        return saves.isEmpty();
     }
 
     @Override

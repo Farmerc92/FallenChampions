@@ -33,9 +33,15 @@ public class SaveFilesTest {
     }
 
     @Test
+    public void isEmpty() {
+        Assert.assertFalse(files.isEmpty());
+    }
+
+    @Test
     public void toStringTest(){
         String actual = "1.  Name: Bob  Level: 1\n2.  Name: Steve  Level: 1\n3.  Name: Paul  Level: 1\n";
         String expected = files.toString();
+        System.out.println(expected);
         Assert.assertEquals(actual, expected);
     }
 }

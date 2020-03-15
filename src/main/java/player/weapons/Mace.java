@@ -1,7 +1,9 @@
 package player.weapons;
 
-public class Mace extends Weapon {
+import com.fasterxml.jackson.annotation.JsonCreator;
 
+public class Mace extends Weapon {
+    @JsonCreator
     public Mace() {
         super(4);
     }

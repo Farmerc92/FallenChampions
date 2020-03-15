@@ -1,10 +1,14 @@
 package Money;
 
-public class Gold extends Currency {
-    int value = 1;
+public enum Coin {
+    GOLD(1),
+    SILVER(1),
+    COPPER(1);
 
-    public Gold() {
+    int value;
 
+    Coin (int newValue) {
+        this.value = newValue;
     }
 
     public int getValue() {
@@ -13,10 +17,5 @@ public class Gold extends Currency {
 
     public void setValue(int value) {
         this.value = value;
-    }
-
-    @Override
-    public String toString() {
-        return "Gold";
     }
 }
