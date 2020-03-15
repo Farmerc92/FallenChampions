@@ -1,6 +1,7 @@
 package npc.monster.drops;
 
-import player.Value;
+
+import interfaces.Value;
 
 public abstract class Item implements Value, Dropable {
 }

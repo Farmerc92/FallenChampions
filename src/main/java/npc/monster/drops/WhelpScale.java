@@ -1,9 +1,11 @@
 package npc.monster.drops;
 
+import Money.Coin;
+
 public class WhelpScale extends Item {
 
     @Override
     public int value() {
-        return 0;
+        return Coin.COPPER.getValue() * 300;
     }
 }
