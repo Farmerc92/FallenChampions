@@ -8,7 +8,6 @@ public class BanditTest {
 
 
     @Test
-
     public void testAttack() {
         Bandit bandit = new Bandit(15, 3, 5, 1, 3);
         int damageDone = 2;
@@ -35,5 +34,6 @@ public class BanditTest {
         int actual = bandit.getXpDrop();
 
         Assert.assertEquals(expected, actual);
+
     }
 }
