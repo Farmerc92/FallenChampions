@@ -7,10 +7,7 @@ import player.armors.Armor;
 import player.armors.Chestplate;
 import player.armors.ObsidianRobes;
 import player.armors.RunePlateBody;
-import player.weapons.Claymore;
-import player.weapons.DeldrimorGreatSword;
-import player.weapons.Longsword;
-import player.weapons.Weapon;
+import player.weapons.*;
 
 import java.util.logging.Logger;
 
@@ -19,11 +16,12 @@ public class InventoryTest {
     private static final Logger LOGGER = Logger.getLogger(InventoryTest.class.getName());
 
 
-    Inventory inv;
+    Inventory<Object> inv;
 
     Weapon weapon;
     Weapon claymore;
     Weapon deldrimorGreatsword;
+    Weapon dsr;
 
     Armor armor;
     Armor runeplatebody;
@@ -32,9 +30,12 @@ public class InventoryTest {
     @Before
     public void setup() {
         inv = new Inventory<>();
+
         weapon = new Longsword();
         claymore = new Claymore();
         deldrimorGreatsword = new DeldrimorGreatSword();
+        dsr = new DhuumsSoulReaper();
+
         armor = new Chestplate();
         obbyRobes = new ObsidianRobes();
         runeplatebody = new RunePlateBody();
@@ -115,6 +116,7 @@ public class InventoryTest {
         inv.addItemToInventory(claymore, 1);
         inv.addItemToInventory(deldrimorGreatsword, 1);
         inv.addItemToInventory(obbyRobes, 2);
+        inv.addItemToInventory(dsr, 1);
 
         System.out.println(inv.toString());
     }
