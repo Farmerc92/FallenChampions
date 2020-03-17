@@ -20,7 +20,6 @@ public class BattleEngineTest {
 
     @Test
     public void battleTest1(){
-        battleEngine = new BattleEngine(player, monster);
-        Assert.assertTrue(battleEngine.battle());
+
     }
 }
