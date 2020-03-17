@@ -7,17 +7,30 @@ import player.Player;
 public class BattleEngine {
     private Player player;
     private Monster monster;
-    private Thread threadMonster;
     private BattleIO io;
 
     public BattleEngine(Player player, Monster monster){
         this.player = player;
         this.monster = monster;
         io = new BattleIO(player, monster);
-        threadMonster = new Thread();
     }
 
     public int playerTurn(){
+        Integer input = io.getIntegerInput(io.attackChoice());
+        if (input == 1)
+            return playerAttack();
+        else if (input == 2){
+            Integer inputSkill = io.getIntegerInput(io.skillChoice());
+            return playerSkill(inputSkill);
+        }
+        return playerTurn();
+    }
+    //Will add skills later to then use in combat
+    private int playerSkill(Integer inputSkill) {
+        return playerAttack();
+    }
+
+    public int playerAttack(){
         int damage = player.attack();
         io.playerAttack(monster.getName(), damage);
         monster.damageHP(damage);
@@ -31,12 +44,43 @@ public class BattleEngine {
         return damage;
     }
 
+    public boolean attackOrder(){
+        return player.getLevel() >= monster.getLevel();
+    }
+
     public boolean battle(){
         while (player.getCurrentHp() > 0 && monster.getCurrentHP() > 0) {
-            playerTurn();
-            if (monster.getCurrentHP() > 0)
-                monsterTurn();
+            if (attackOrder())
+                playerFirst();
+            else
+                monsterFirst();
         }
         return player.getCurrentHp() > 0;
+    }
+
+    public void playerFirst(){
+        delay();
+        playerTurn();
+        delay();
+        if (monster.getCurrentHP() > 0)
+            monsterTurn();
+    }
+
+    public void monsterFirst(){
+        delay();
+        monsterTurn();
+        delay();
+        if (player.getCurrentHp() > 0)
+            playerTurn();
+    }
+
+    public boolean delay(){
+        try {
+            Thread.sleep(2000);
+            return true;
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

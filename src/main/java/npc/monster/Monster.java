@@ -39,4 +39,8 @@ public abstract class Monster extends NPC implements Attack {
     public String getName() {
         return name;
     }
+
+    public int getLevel() {
+        return level;
+    }
 }

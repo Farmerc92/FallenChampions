@@ -1,6 +1,8 @@
+import engines.BattleEngine;
 import io.GameIO;
 import io.PlayerIO;
 import locations.towns.*;
+import npc.monster.Slime;
 import player.Player;
 import player.SaveFiles;
 
