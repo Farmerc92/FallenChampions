@@ -1,10 +1,13 @@
 package npc.monster;
 
+import npc.monster.drops.Dropable;
+
 import java.util.Random;
 
-public class Bandit extends Monster {
-    public Bandit(int HP, int strength, int dexterity, int intelligence, int level) {
-        super(HP, strength, dexterity, intelligence, level);
+public class Bandit extends Monster implements Dropable {
+    public Bandit(int HP, int level) {
+        super(HP, level);
+        this.name = "Bandit";
     }
 
     public int attack() {
@@ -15,6 +18,6 @@ public class Bandit extends Monster {
     }
 
     public String speak() {
-        return null;
+        return "Give me all your stuffs!";
     }
 }

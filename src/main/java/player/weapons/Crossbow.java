@@ -1,11 +1,14 @@
 package player.weapons;
 
-public class Crossbow extends Weapon {
+import com.fasterxml.jackson.annotation.JsonCreator;
 
+public class Crossbow extends Weapon {
+    @JsonCreator
     public Crossbow() {
         super(2);
     }
 
+    @Override
     public int value() {
         return 0;
     }

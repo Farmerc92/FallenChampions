@@ -5,12 +5,13 @@ import npc.NPC;
 import java.util.Random;
 
 public class Whelp extends Monster {
-    public Whelp(int HP, int strength, int dexterity, int intelligence, int level) {
-        super(HP, strength, dexterity, intelligence, level);
+    public Whelp(int HP, int level) {
+        super(HP, level);
+        this.name = "Whelp";
     }
 
     public String speak() {
-        return null;
+        return "Kreeeeee!";
     }
 
     public int attack() {

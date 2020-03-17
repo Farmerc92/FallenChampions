@@ -3,8 +3,9 @@ package npc.monster;
 import java.util.Random;
 
 public class Basilisk extends Monster {
-    public Basilisk(int HP, int strength, int dexterity, int intelligence, int level) {
-        super(HP, strength, dexterity, intelligence, level);
+    public Basilisk(int HP, int level) {
+        super(HP, level);
+        this.name = "Basilisk";
     }
 
     public int attack() {
@@ -15,6 +16,6 @@ public class Basilisk extends Monster {
     }
 
     public String speak() {
-        return null;
+        return "Grrrrrrrrr";
     }
 }

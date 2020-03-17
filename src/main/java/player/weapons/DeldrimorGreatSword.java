@@ -1,11 +1,14 @@
 package player.weapons;
 
-public class DeldrimorGreatSword extends Weapon {
+import com.fasterxml.jackson.annotation.JsonCreator;
 
+public class DeldrimorGreatSword extends Weapon {
+    @JsonCreator
     public DeldrimorGreatSword() {
         super(25);
     }
 
+    @Override
     public int value() {
         return 0;
     }

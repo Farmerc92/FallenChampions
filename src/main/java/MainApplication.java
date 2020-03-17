@@ -1,10 +1,10 @@
+import engines.BattleEngine;
 import io.GameIO;
 import io.PlayerIO;
 import locations.towns.*;
+import npc.monster.Slime;
 import player.Player;
 import player.SaveFiles;
-
-import static sun.jvm.hotspot.runtime.PerfMemory.start;
 
 public class MainApplication {
     private Cintra cintra = new Cintra();
@@ -25,7 +25,11 @@ public class MainApplication {
         if (newOrLoad == 1)
             createPlayer();
         else if (newOrLoad == 2)
-            choosePlayer();
+            if (!saveFiles.isEmpty())
+                choosePlayer();
+            else {
+                System.out.println("No save files found.\nYou will now be redirected to New Game.\n");
+                createPlayer(); }
         else
             System.out.println("\nPlease Enter 1 or 2.\n");
             intro();
@@ -53,6 +57,7 @@ public class MainApplication {
 
     private static void beginning() {
         System.out.println("We did it!");
+        System.exit(0);
     }
 
     public static void main(String[] args){

@@ -5,58 +5,120 @@ import org.junit.Before;
 import org.junit.Test;
 import player.armors.Armor;
 import player.armors.Chestplate;
-import player.weapons.Longsword;
-import player.weapons.Weapon;
+import player.armors.ObsidianRobes;
+import player.armors.RunePlateBody;
+import player.weapons.*;
+
+import java.util.logging.Logger;
 
 public class InventoryTest {
 
-    Inventory inv;
+    private static final Logger LOGGER = Logger.getLogger(InventoryTest.class.getName());
+
+
+    Inventory<Object> inv;
+
     Weapon weapon;
+    Weapon claymore;
+    Weapon deldrimorGreatsword;
+    Weapon dsr;
+
     Armor armor;
+    Armor runeplatebody;
+    Armor obbyRobes;
 
     @Before
     public void setup() {
-        inv = new Inventory();
+        inv = new Inventory<>();
+
         weapon = new Longsword();
+        claymore = new Claymore();
+        deldrimorGreatsword = new DeldrimorGreatSword();
+        dsr = new DhuumsSoulReaper();
+
         armor = new Chestplate();
+        obbyRobes = new ObsidianRobes();
+        runeplatebody = new RunePlateBody();
+
+
     }
 
     @Test
     public void testInventoryConstructor() {
         int armorSize = inv.getArmorList().size();
         int weaponSize = inv.getWeaponList().size();
+
         Assert.assertEquals(0,armorSize);
         Assert.assertEquals(0,weaponSize);
     }
 
     @Test
     public void testAddWeapon() {
-        inv.addWeapon(weapon);
+        inv.addWeaponToWeaponSlot(weapon);
         int weaponSize = inv.getWeaponList().size();
+
         Assert.assertEquals(1, weaponSize);
     }
 
     @Test
     public void testAddArmor() {
-        inv.addArmor(armor);
+        inv.addArmorToArmorSlot(armor);
         int armorSize = inv.getArmorList().size();
+
         Assert.assertEquals(1, armorSize);
     }
 
     @Test
     public void testRemoveWeapon() {
-        inv.addWeapon(weapon);
-        inv.removeWeapon(weapon);
+        inv.addWeaponToWeaponSlot(weapon);
+        inv.removeWeaponFromWeaponSlot(weapon);
         int weaponSize = inv.getWeaponList().size();
+
         Assert.assertEquals(1, weaponSize);
     }
 
     @Test
     public void testRemoveArmor() {
-        inv.addArmor(armor);
-        inv.removeArmor(armor);
+        inv.addArmorToArmorSlot(armor);
+        inv.removeArmorFromArmorSlot(armor);
         int armorSize = inv.getArmorList().size();
+
         Assert.assertEquals(0, armorSize);
+    }
+
+    @Test
+    public void testAddItemToInventory() {
+        inv.addItemToInventory(runeplatebody, 1);
+        inv.addItemToInventory(claymore, 1);
+
+        LOGGER.info("\n" + inv.getSize());
+
+        String retrievedItem = inv.getItemFromInventory(runeplatebody).toString();
+        String expected = "Rune Platebody";
+        Assert.assertEquals(expected, retrievedItem);
+    }
+
+    @Test
+    public void testRemoveItemFromInventory() {
+        inv.addItemToInventory(runeplatebody, 1);
+        inv.addItemToInventory(claymore, 1);
+        inv.getItemFromInventory(runeplatebody);
+
+        int expectedSize = 1;
+        int actualSize = inv.getSize();
+
+        Assert.assertEquals(expectedSize, actualSize);
+    }
+
+    @Test
+    public void printInventory() {
+        inv.addItemToInventory(runeplatebody, 1);
+        inv.addItemToInventory(claymore, 1);
+        inv.addItemToInventory(deldrimorGreatsword, 1);
+        inv.addItemToInventory(obbyRobes, 2);
+        inv.addItemToInventory(dsr, 1);
+
+        System.out.println(inv.toString());
     }
 
 }

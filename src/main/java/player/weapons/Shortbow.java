@@ -1,11 +1,14 @@
 package player.weapons;
 
-public class Shortbow extends Weapon{
+import com.fasterxml.jackson.annotation.JsonCreator;
 
+public class Shortbow extends Weapon{
+    @JsonCreator
     public Shortbow() {
         super(1);
     }
 
+    @Override
     public int value() {
         return 0;
     }

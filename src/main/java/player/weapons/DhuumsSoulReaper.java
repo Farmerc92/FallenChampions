@@ -1,11 +1,14 @@
 package player.weapons;
 
-public class DhuumsSoulReaper extends Weapon {
+import com.fasterxml.jackson.annotation.JsonCreator;
 
+public class DhuumsSoulReaper extends Weapon {
+    @JsonCreator
     public DhuumsSoulReaper(){
         super(500);
     }
 
+    @Override
     public int value() {
         return 0;
     }

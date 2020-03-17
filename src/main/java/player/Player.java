@@ -1,9 +1,14 @@
 package player;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import interfaces.Attack;
 import locations.Location;
 import player.armors.Armor;
+import player.armors.Chestplate;
 import player.skills.Skills;
+import player.weapons.DhuumsSoulReaper;
+import player.weapons.Shortsword;
 import player.weapons.Weapon;
 
 import java.util.ArrayList;
@@ -15,7 +20,9 @@ public class Player implements Attack {
     private int dexterity;
     private int intelligence;
     private int hp;
+    private int currentHp;
     private int mp;
+    private int currentMp;
     private int level;
     private int experience;
     private Inventory inventory;
@@ -26,16 +33,20 @@ public class Player implements Attack {
     private Location location;
 
     public Player(String name){
-        this.name = name;
         strength = 5;
         dexterity = 5;
         intelligence = 5;
         hp = 10;
+        currentHp = 10;
         mp = 10;
-        skills = new ArrayList<>();
-        inventory = new Inventory();
+        currentMp = 10;
         level = 1;
         experience = 0;
+        inventory = new Inventory();
+        armor = new Chestplate();
+        weapon = new Shortsword();
+        skills = new ArrayList<>();
+        this.name = name;
         location = null;
     }
 
@@ -45,22 +56,41 @@ public class Player implements Attack {
         intelligence = 50000;
         strength = 50000;
         hp = 100000;
+        currentHp = 10000;
         mp = 100000;
+        currentMp = 10000;
         level  = 99;
+        experience = 0;
+        inventory = new Inventory();
+        armor = new Chestplate();
+        weapon = new DhuumsSoulReaper();
+        skills = new ArrayList<>();
+        this.name = "God";
+        location = null;
     }
-
-    public Player(String name, int strength, int dexterity, int intelligence, int hp, int mp, ArrayList<Skills> skills,
-                  Inventory inventory, int level, int experience, Location location){
-        this.name = name;
+    @JsonCreator
+    public Player(@JsonProperty("strength") int strength, @JsonProperty("dexterity") int dexterity,
+                  @JsonProperty("intelligence") int intelligence, @JsonProperty("hp") int hp,
+                  @JsonProperty("currentHp") int currentHp, @JsonProperty("mp") int mp,
+                  @JsonProperty("currentMp") int currentMp, @JsonProperty("level") int level,
+                  @JsonProperty("experience") int experience, @JsonProperty("inventory") Inventory inventory,
+                  @JsonProperty("armor") Armor armor, @JsonProperty("weapon") Weapon weapon,
+                  @JsonProperty("skills") ArrayList<Skills> skills, @JsonProperty("name") String name,
+                  @JsonProperty("location") Location location){
         this.strength = strength;
         this.dexterity = dexterity;
         this.intelligence = intelligence;
         this.hp = hp;
+        this.currentHp = currentHp;
         this.mp = mp;
-        this.skills = skills;
-        this.inventory = inventory;
+        this.currentMp = currentMp;
         this.level = level;
         this.experience = experience;
+        this.inventory = inventory;
+        this.armor = armor;
+        this.weapon = weapon;
+        this.skills = skills;
+        this.name = name;
         this.location = location;
     }
 
@@ -96,13 +126,23 @@ public class Player implements Attack {
         this.hp += 5;
     }
 
-    public int getMp() {
-        return mp;
-    }
+    public int getCurrentHp() { return currentHp; }
+
+    public void restoreHp() { this.currentHp = hp; }
+
+    public void takeDamage(int damage) { currentHp -= damage; }
+
+    public int getMp() { return mp; }
 
     public void incrementMp() {
         this.mp += 5;
     }
+
+    public int getCurrentMp() { return currentMp; }
+
+    public void restoreMp() { currentMp = mp; }
+
+    public void useMana(int cost) { currentMp -= cost; }
 
     public Inventory getInventory() {
         return inventory;
@@ -128,10 +168,6 @@ public class Player implements Attack {
         return skills;
     }
 
-    public void setSkills(List<Skills> skills) {
-        this.skills = skills;
-    }
-
     public int getLevel() {
         return level;
     }
@@ -148,9 +184,7 @@ public class Player implements Attack {
         this.experience = experience;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     public Location getLocation() {
         return location;
