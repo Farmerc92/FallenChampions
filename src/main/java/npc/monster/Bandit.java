@@ -4,7 +4,6 @@ import player.Inventory;
 import Money.Coin;
 import Money.CoinPouch;
 import interfaces.Drops;
-import npc.monster.drops.Dropable;
 
 import java.util.Random;
 
@@ -25,15 +24,12 @@ public class Bandit extends Monster implements Drops {
     }
 
     @Override
-    public Dropable drop() {
+    public void drop() {
         Random random = new Random();
+        CoinPouch playerPouch = new CoinPouch();
         int roll = random.nextInt(100);
-        if (roll < 50){
-            return null;
+        if (roll < 100){
+            playerPouch.addCurrency(Coin.COPPER,15);
         }
-        if (roll > 50){
-            return Coin.SILVER;
-        }
-        return null;
     }
 }

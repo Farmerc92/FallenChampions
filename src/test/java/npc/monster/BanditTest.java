@@ -1,6 +1,7 @@
 package npc.monster;
 
 import Money.Coin;
+import Money.CoinPouch;
 import npc.monster.drops.Dropable;
 import org.junit.Assert;
 import org.junit.Before;
@@ -44,10 +45,12 @@ public class BanditTest {
 
 //    @Test
 //    public void testDrop(){
+//        CoinPouch coinPouch = new CoinPouch();
 //        Bandit bandit = new Bandit(15, 3, 5, 1, 3);
-//        Dropable expected = Coin.SILVER;
-//        Dropable actual = bandit.drop();
+//        bandit.drop();
 //
-//        Assert.assertEquals(expected,actual);
+//        coinPouch.getCoins();
+//        Assert.assertEquals(, coinPouch.getCopper());
+//
 //    }
 }
