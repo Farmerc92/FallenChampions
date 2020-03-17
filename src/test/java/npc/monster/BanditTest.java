@@ -14,8 +14,12 @@ public class BanditTest {
 
     @Test
     public void testAttack() {
+<<<<<<< HEAD
         Random random = new Random();
         Bandit bandit = new Bandit(15, 3, 5, 1, 3);
+=======
+        Bandit bandit = new Bandit(15,  3);
+>>>>>>> 307326389ff5c6eeddf06468fc51f7258a4bd714
         int damageDone = 2;
         int expected = damageDone;
         int actual = bandit.attack();
@@ -25,7 +29,7 @@ public class BanditTest {
 
     @Test
     public  void testSpeak(){
-        Bandit bandit = new Bandit(15, 3, 5, 1, 3);
+        Bandit bandit = new Bandit(15,  3);
         String expected = "Give me all your stuffs!";
         String actual = bandit.speak();
 
@@ -34,7 +38,7 @@ public class BanditTest {
 
     @Test
     public void testXpDrop(){
-        Bandit bandit = new Bandit(15, 3, 5, 1, 3);
+        Bandit bandit = new Bandit(15,  3);
         int expected = 30;
         bandit.setXpDrop();
         int actual = bandit.getXpDrop();

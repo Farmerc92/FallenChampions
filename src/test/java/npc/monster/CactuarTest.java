@@ -7,7 +7,7 @@ public class CactuarTest {
     @Test
 
     public void testAttack() {
-        Cactuar cactuar = new Cactuar(15, 3, 5, 1, 3);
+        Cactuar cactuar = new Cactuar(15,  3);
         int damageDone = 2;
         int expected = damageDone;
         int actual = cactuar.attack();
@@ -17,7 +17,7 @@ public class CactuarTest {
 
     @Test
     public  void testSpeak(){
-        Cactuar cactuar = new Cactuar(15, 3, 5, 1, 3);
+        Cactuar cactuar = new Cactuar(15,  3);
         String expected = null;
         String actual = cactuar.speak();
 
@@ -26,7 +26,7 @@ public class CactuarTest {
 
     @Test
     public void testXpDrop() {
-        Cactuar cactuar = new Cactuar(14, 3, 5, 1, 3);
+        Cactuar cactuar = new Cactuar(14,  3);
         int expected = 28;
         cactuar.setXpDrop();
         int actual = cactuar.getXpDrop();

@@ -7,7 +7,7 @@ public class WhelpTest {
     @Test
 
     public void testAttack() {
-        Whelp whelp = new Whelp(15, 3, 5, 1, 3);
+        Whelp whelp = new Whelp(15, 3);
         int damageDone = 2;
         int expected = damageDone;
         int actual = whelp.attack();
@@ -17,7 +17,7 @@ public class WhelpTest {
 
     @Test
     public  void testSpeak(){
-        Whelp whelp = new Whelp(15, 3, 5, 1, 3);
+        Whelp whelp = new Whelp(15, 3);
         String expected = "Kreeeeee!";
         String actual = whelp.speak();
 
@@ -26,7 +26,7 @@ public class WhelpTest {
 
     @Test
     public void testXpDrop() {
-        Whelp whelp = new Whelp(132, 3, 5, 1, 24);
+        Whelp whelp = new Whelp(132,  24);
         int expected = 264;
         whelp.setXpDrop();
         int actual = whelp.getXpDrop();
