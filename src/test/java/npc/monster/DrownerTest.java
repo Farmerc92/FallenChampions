@@ -7,7 +7,7 @@ public class DrownerTest {
     @Test
 
     public void testAttack() {
-        Goblin goblin = new Goblin(15, 3, 5, 1, 3);
+        Goblin goblin = new Goblin(15,  3);
         int damageDone = 2;
         int expected = damageDone;
         int actual = goblin.attack();
@@ -17,7 +17,7 @@ public class DrownerTest {
 
     @Test
     public  void testSpeak(){
-        Drowner drowner = new Drowner(15, 3, 5, 1, 3);
+        Drowner drowner = new Drowner(15,  3);
         String expected = null;
         String actual = drowner.speak();
 
@@ -26,7 +26,7 @@ public class DrownerTest {
 
     @Test
     public void testXpDrop() {
-        Drowner drowner = new Drowner(76, 3, 5, 1, 3);
+        Drowner drowner = new Drowner(76,  3);
         int expected = 152;
         drowner.setXpDrop();
         int actual = drowner.getXpDrop();

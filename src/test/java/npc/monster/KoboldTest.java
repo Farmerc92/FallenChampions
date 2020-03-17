@@ -7,7 +7,7 @@ public class KoboldTest {
     @Test
 
     public void testAttack() {
-        Kobold kobold = new Kobold(15, 3, 5, 1, 3);
+        Kobold kobold = new Kobold(15,  3);
         int damageDone = 2;
         int expected = damageDone;
             int actual = kobold.attack();
@@ -17,7 +17,7 @@ public class KoboldTest {
 
     @Test
     public  void testSpeak(){
-        Kobold kobold = new Kobold(15, 3, 5, 1, 3);
+        Kobold kobold = new Kobold(15,  3);
         String expected = "You no take candle!";
         String actual = kobold.speak();
 
@@ -26,7 +26,7 @@ public class KoboldTest {
 
     @Test
     public void testXpDrop() {
-        Kobold kobold = new Kobold(8, 3, 5, 1, 3);
+        Kobold kobold = new Kobold(8,  3);
         int expected = 16;
         kobold.setXpDrop();
         int actual = kobold.getXpDrop();

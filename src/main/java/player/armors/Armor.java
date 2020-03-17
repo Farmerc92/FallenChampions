@@ -8,7 +8,8 @@ import interfaces.Value;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY)
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = Chestplate.class, name = "Chestplate"), }
+        @JsonSubTypes.Type(value = Chestplate.class, name = "Chestplate"),
+        }
 )
 
 public abstract class Armor implements Value {

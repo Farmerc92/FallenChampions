@@ -9,18 +9,15 @@ import java.util.Random;
 
 public abstract class Monster extends NPC implements Attack {
     protected int HP;
-    protected int Strength;
-    protected int Dexterity;
-    protected int Intelligence;
+    protected int currentHP;
     protected int level;
     protected int xpDrop;
+    protected String name;
 
-    protected Monster(int HP, int strength, int dexterity, int intelligence, int level) {
+    protected Monster(int HP, int level) {
         this.HP = HP;
+        this.currentHP = HP;
         this.level = level;
-        Strength = strength;
-        Dexterity = dexterity;
-        Intelligence = intelligence;
     }
 
     public int getXpDrop() {
@@ -31,4 +28,19 @@ public abstract class Monster extends NPC implements Attack {
         this.xpDrop = this.HP * 2;
     }
 
+    public int getCurrentHP() {
+        return currentHP;
+    }
+
+    public void damageHP(int damage) {
+        this.currentHP -= damage;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getLevel() {
+        return level;
+    }
 }
