@@ -1,6 +1,8 @@
+import engines.BattleEngine;
 import io.GameIO;
 import io.PlayerIO;
 import locations.towns.*;
+import npc.monster.Slime;
 import player.Player;
 import player.SaveFiles;
 
@@ -26,7 +28,7 @@ public class MainApplication {
             if (!saveFiles.isEmpty())
                 choosePlayer();
             else {
-                System.out.println("No save files found.\nYou will not be redirected to New Game.\n");
+                System.out.println("No save files found.\nYou will now be redirected to New Game.\n");
                 createPlayer(); }
         else
             System.out.println("\nPlease Enter 1 or 2.\n");

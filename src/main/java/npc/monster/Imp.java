@@ -4,8 +4,9 @@ import java.util.Random;
 
 public class Imp extends Monster {
 
-    public Imp(int HP, int strength, int dexterity, int intelligence, int level) {
-        super(HP, strength, dexterity, intelligence, level);
+    public Imp(int HP, int level) {
+        super(HP, level);
+        this.name = "Imp";
     }
 
     public String speak() {

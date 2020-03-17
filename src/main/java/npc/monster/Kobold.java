@@ -6,8 +6,9 @@ import java.util.Random;
 
 public class Kobold extends Monster {
 
-    public Kobold(int HP, int strength, int dexterity, int intelligence, int level) {
-        super(HP, strength, dexterity, intelligence, level);
+    public Kobold(int HP, int level) {
+        super(HP, level);
+        this.name = "Kobold";
     }
 
     public String speak() {

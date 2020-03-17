@@ -27,7 +27,7 @@ public class SaveFiles {
             saves = objectMapper.readValue(new File("saves.json"), new TypeReference<HashMap<Integer, Player>>() {
             });
         } catch (MismatchedInputException e) {
-            System.out.println("No Load files found.\n");
+            System.out.println("No save files found.\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
