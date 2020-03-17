@@ -4,16 +4,16 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class DjiinTest {
-    @Test
-
-    public void testAttack() {
-        Djiin djiin = new Djiin(15,  3);
-        int damageDone = 2;
-        int expected = damageDone;
-        int actual = djiin.attack();
-
-        Assert.assertEquals(expected, actual);
-    }
+//    @Test
+//
+//    public void testAttack() {
+//        Djiin djiin = new Djiin(15,  3);
+//        int damageDone = 2;
+//        int expected = damageDone;
+//        int actual = djiin.attack();
+//
+//        Assert.assertEquals(expected, actual);
+//    }
 
     @Test
     public  void testSpeak(){

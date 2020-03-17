@@ -5,4 +5,10 @@ public class FlameSack extends Item {
     public int value() {
         return 376;
     }
+
+    @Override
+    public void addToLootTable() {
+        String flameSack = "Flame Sack";
+        dropTable.put(flameSack,1);
+    }
 }

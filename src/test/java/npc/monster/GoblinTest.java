@@ -4,16 +4,16 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class GoblinTest {
-    @Test
-
-    public void testAttack() {
-        Goblin goblin = new Goblin(15,  3);
-        int damageDone = 2;
-        int expected = damageDone;
-        int actual = goblin.attack();
-
-        Assert.assertEquals(expected, actual);
-    }
+//    @Test
+//
+//    public void testAttack() {
+//        Goblin goblin = new Goblin(15,  3);
+//        int damageDone = 2;
+//        int expected = damageDone;
+//        int actual = goblin.attack();
+//
+//        Assert.assertEquals(expected, actual);
+//    }
 
     @Test
     public  void testSpeak(){

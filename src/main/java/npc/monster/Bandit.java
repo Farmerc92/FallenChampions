@@ -9,6 +9,8 @@ import java.util.Random;
 
 
 public class Bandit extends Monster implements Drops {
+    Random random = new Random();
+
     public Bandit(int HP, int level) {
         super(HP, level);
         this.name = "Bandit";
@@ -28,7 +30,6 @@ public class Bandit extends Monster implements Drops {
 
     @Override
     public void drop() {
-        Random random = new Random();
         CoinPouch playerPouch = new CoinPouch();
         int roll = random.nextInt(100);
         if (roll < 100){

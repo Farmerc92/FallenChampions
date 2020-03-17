@@ -6,4 +6,9 @@ public class Candle extends Item implements Dropable {
         return 8;
     }
 
+    @Override
+    public void addToLootTable() {
+        String candle = "Candle";
+        dropTable.put(candle,1);
+    }
 }

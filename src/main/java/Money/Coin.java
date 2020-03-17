@@ -1,9 +1,7 @@
 package Money;
 
 
-import npc.monster.drops.Dropable;
-
-public enum Coin implements Dropable {
+public enum Coin {
     GOLD(1),
     SILVER(1),
     COPPER(1);
@@ -21,4 +19,5 @@ public enum Coin implements Dropable {
     public void setValue(int value) {
         this.value = value;
     }
+
 }

@@ -4,16 +4,16 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class CactuarTest {
-    @Test
 
-    public void testAttack() {
-        Cactuar cactuar = new Cactuar(15,  3);
-        int damageDone = 2;
-        int expected = damageDone;
-        int actual = cactuar.attack();
-
-        Assert.assertEquals(expected, actual);
-    }
+//    @Test
+//    public void testAttack() {
+//        Cactuar cactuar = new Cactuar(15,  3);
+//        int damageDone = 2;
+//        int expected = damageDone;
+//        int actual = cactuar.attack();
+//
+//        Assert.assertEquals(expected, actual);
+//    }
 
     @Test
     public  void testSpeak(){

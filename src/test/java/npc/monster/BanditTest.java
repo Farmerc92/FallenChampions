@@ -12,20 +12,17 @@ import java.util.Random;
 public class BanditTest {
 
 
-    @Test
-    public void testAttack() {
-<<<<<<< HEAD
-        Random random = new Random();
-        Bandit bandit = new Bandit(15, 3, 5, 1, 3);
-=======
-        Bandit bandit = new Bandit(15,  3);
->>>>>>> 307326389ff5c6eeddf06468fc51f7258a4bd714
-        int damageDone = 2;
-        int expected = damageDone;
-        int actual = bandit.attack();
-
-        Assert.assertEquals(expected, actual);
-    }
+//    @Test
+//    public void testAttack() {
+//
+//        Random random = new Random();
+//        Bandit bandit = new Bandit(15,  3);
+//        int damageDone = 2;
+//        int expected = damageDone;
+//        int actual = bandit.attack();
+//
+//        Assert.assertEquals(expected, actual);
+//    }
 
     @Test
     public  void testSpeak(){
@@ -50,10 +47,8 @@ public class BanditTest {
 //    @Test
 //    public void testDrop(){
 //        CoinPouch coinPouch = new CoinPouch();
-//        Bandit bandit = new Bandit(15, 3, 5, 1, 3);
+//        Bandit bandit = new Bandit(15, 3);
 //        bandit.drop();
-//
-//        coinPouch.getCoins();
 //        Assert.assertEquals(, coinPouch.getCopper());
 //
 //    }
