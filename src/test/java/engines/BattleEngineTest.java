@@ -17,9 +17,4 @@ public class BattleEngineTest {
         player = new Player("Takami");
         monster = new Slime(10, 1);
     }
-
-    @Test
-    public void battleTest1(){
-
-    }
 }

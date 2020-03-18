@@ -4,12 +4,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import interfaces.Attack;
 import locations.Location;
-import player.armors.Armor;
-import player.armors.Chestplate;
+import player.armors.Armors;
 import player.skills.Skills;
-import player.weapons.DhuumsSoulReaper;
-import player.weapons.Shortsword;
-import player.weapons.Weapon;
+import player.weapons.Weapons;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,8 +23,8 @@ public class Player implements Attack {
     private int level;
     private int experience;
     private Inventory inventory;
-    private Armor armor;
-    private Weapon weapon;
+    private Armors armor;
+    private Weapons weapon;
     private List<Skills> skills;
     private String name;
     private Location location;
@@ -43,8 +40,8 @@ public class Player implements Attack {
         level = 1;
         experience = 0;
         inventory = new Inventory();
-        armor = new Chestplate();
-        weapon = new Shortsword();
+        armor = Armors.SHIRT;
+        weapon = Weapons.FISTS;
         skills = new ArrayList<>();
         this.name = name;
         location = null;
@@ -62,8 +59,8 @@ public class Player implements Attack {
         level  = 99;
         experience = 0;
         inventory = new Inventory();
-        armor = new Chestplate();
-        weapon = new DhuumsSoulReaper();
+        armor = Armors.SHIRT;
+        weapon = Weapons.DHUUMSSOULREAPER;
         skills = new ArrayList<>();
         this.name = "God";
         location = null;
@@ -74,7 +71,7 @@ public class Player implements Attack {
                   @JsonProperty("currentHp") int currentHp, @JsonProperty("mp") int mp,
                   @JsonProperty("currentMp") int currentMp, @JsonProperty("level") int level,
                   @JsonProperty("experience") int experience, @JsonProperty("inventory") Inventory inventory,
-                  @JsonProperty("armor") Armor armor, @JsonProperty("weapon") Weapon weapon,
+                  @JsonProperty("armor") Armors armor, @JsonProperty("weapon") Weapons weapon,
                   @JsonProperty("skills") ArrayList<Skills> skills, @JsonProperty("name") String name,
                   @JsonProperty("location") Location location){
         this.strength = strength;
@@ -148,19 +145,19 @@ public class Player implements Attack {
         return inventory;
     }
 
-    public Armor getArmor() {
+    public Armors getArmor() {
         return armor;
     }
 
-    public void setArmor(Armor armor) {
+    public void setArmor(Armors armor) {
         this.armor = armor;
     }
 
-    public Weapon getWeapon() {
+    public Weapons getWeapon() {
         return weapon;
     }
 
-    public void setWeapon(Weapon weapon) {
+    public void setWeapon(Weapons weapon) {
         this.weapon = weapon;
     }
 
