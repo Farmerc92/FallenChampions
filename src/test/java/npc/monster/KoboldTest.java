@@ -4,16 +4,16 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class KoboldTest {
-    @Test
-
-    public void testAttack() {
-        Kobold kobold = new Kobold(15,  3);
-        int damageDone = 2;
-        int expected = damageDone;
-            int actual = kobold.attack();
-
-        Assert.assertEquals(expected, actual);
-    }
+//    @Test
+//
+//    public void testAttack() {
+//        Kobold kobold = new Kobold(15,  3);
+//        int damageDone = 2;
+//        int expected = damageDone;
+//            int actual = kobold.attack();
+//
+//        Assert.assertEquals(expected, actual);
+//    }
 
     @Test
     public  void testSpeak(){

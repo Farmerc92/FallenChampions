@@ -4,16 +4,15 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class BasiliskTest {
-    @Test
-
-    public void testAttack() {
-        Basilisk basilisk = new Basilisk(15,  3);
-        int damageDone = 2;
-        int expected = damageDone;
-        int actual = basilisk.attack();
-
-        Assert.assertEquals(expected, actual);
-    }
+//    @Test
+//    public void testAttack() {
+//        Basilisk basilisk = new Basilisk(15,  3);
+//        int damageDone = 2;
+//        int expected = damageDone;
+//        int actual = basilisk.attack();
+//
+//        Assert.assertEquals(expected, actual);
+//    }
 
     @Test
     public  void testSpeak(){
@@ -32,5 +31,16 @@ public class BasiliskTest {
         int actual = basilisk.getXpDrop();
 
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDrop(){
+        Basilisk basilisk = new Basilisk(40, 3);
+        basilisk.drop();
+        int expected = 1;
+
+
+        Assert.assertEquals(expected, basilisk.basiliskEye.dropTable.size());
+
     }
 }

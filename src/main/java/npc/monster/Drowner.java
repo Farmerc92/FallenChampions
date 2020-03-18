@@ -1,10 +1,12 @@
 package npc.monster;
 
+import interfaces.Drops;
 import npc.NPC;
 
 import java.util.Random;
 
-public class Drowner extends Monster {
+public class Drowner extends Monster implements Drops {
+    Random random = new Random();
 
 
     public Drowner(int HP, int level) {
@@ -17,9 +19,13 @@ public class Drowner extends Monster {
     }
 
     public int attack() {
-        Random random = new Random();
         int damage;
         damage = random.nextInt(8);
         return damage;
+    }
+
+    @Override
+    public void drop() {
+
     }
 }

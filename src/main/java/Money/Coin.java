@@ -1,7 +1,7 @@
 package Money;
 
 
-public enum Coin{
+public enum Coin {
     GOLD(1),
     SILVER(1),
     COPPER(1);
@@ -15,5 +15,6 @@ public enum Coin{
     public int getValue() {
         return value;
     }
+
 
 }
