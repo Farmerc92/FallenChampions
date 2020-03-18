@@ -1,12 +1,13 @@
 package npc.monster;
 
+import interfaces.Drops;
 import npc.NPC;
 import npc.monster.drops.Candle;
 import npc.monster.drops.Dropable;
 
 import java.util.Random;
 
-public class Goblin extends Monster implements Dropable {
+public class Goblin extends Monster implements Drops {
     Candle candle = new Candle();
     Random random = new Random();
 
@@ -27,7 +28,7 @@ public class Goblin extends Monster implements Dropable {
     }
 
     @Override
-    public void addToLootTable() {
+    public void drop() {
         candle.addToLootTable();
     }
 }

@@ -1,5 +1,6 @@
 package npc.monster;
 
+import npc.monster.drops.Item;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -32,5 +33,15 @@ public class WhelpTest {
         int actual = whelp.getXpDrop();
 
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDrop(){
+        Whelp whelp = new Whelp(8, 3);
+        whelp.drop();
+        int expected = 1;
+
+        Assert.assertEquals(expected, Item.dropTable.size());
+
     }
 }

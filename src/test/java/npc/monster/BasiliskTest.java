@@ -1,5 +1,6 @@
 package npc.monster;
 
+import npc.monster.drops.Item;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -39,8 +40,7 @@ public class BasiliskTest {
         basilisk.drop();
         int expected = 1;
 
-
-        Assert.assertEquals(expected, basilisk.basiliskEye.dropTable.size());
+        Assert.assertEquals(expected, Item.dropTable.size());
 
     }
 }

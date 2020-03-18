@@ -1,5 +1,6 @@
 package npc.monster;
 
+import npc.monster.drops.Item;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -33,4 +34,14 @@ public class DrownerTest {
 
         Assert.assertEquals(expected, actual);
     }
+
+//    @Test
+//    public void testDrop(){
+//        Drowner drowner = new Drowner(40, 3);
+//        drowner.drop();
+//        int expected = 1;
+//
+//        Assert.assertEquals(expected, Item.dropTable.size());
+//
+//    }
 }

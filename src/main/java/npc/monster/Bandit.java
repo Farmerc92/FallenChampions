@@ -18,7 +18,6 @@ public class Bandit extends Monster implements Drops {
     }
 
     public int attack() {
-        Random random = new Random();
         int damage;
         damage = random.nextInt(4);
         return damage;

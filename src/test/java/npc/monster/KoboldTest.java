@@ -1,5 +1,6 @@
 package npc.monster;
 
+import npc.monster.drops.Item;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -32,5 +33,15 @@ public class KoboldTest {
         int actual = kobold.getXpDrop();
 
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDrop(){
+        Kobold kobold = new Kobold(8, 3);
+        kobold.drop();
+        int expected = 1;
+
+        Assert.assertEquals(expected, Item.dropTable.size());
+
     }
 }

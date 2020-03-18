@@ -1,11 +1,12 @@
 package npc.monster;
 
+import interfaces.Drops;
 import npc.monster.drops.Dropable;
 import npc.monster.drops.VialOfWater;
 
 import java.util.Random;
 
-public class Djiin extends Monster implements Dropable {
+public class Djiin extends Monster implements Drops {
     VialOfWater vialOfWater = new VialOfWater();
     Random random = new Random();
 
@@ -26,7 +27,7 @@ public class Djiin extends Monster implements Dropable {
     }
 
     @Override
-    public void addToLootTable() {
+    public void drop() {
         vialOfWater.addToLootTable();
     }
 }

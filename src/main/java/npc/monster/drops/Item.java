@@ -12,7 +12,7 @@ import interfaces.Value;
 
 
 public abstract class Item implements Value, Dropable {
-    public Map< String , Integer> dropTable = new HashMap<>();
+    public static Map< String , Integer> dropTable = new HashMap<>();
 
     public void lootPickUp(){
     }

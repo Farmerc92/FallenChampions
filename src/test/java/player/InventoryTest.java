@@ -115,7 +115,7 @@ public class InventoryTest {
     }
 
     @Test
-    public void testRemoveItemFromInventory() {
+    public void testRemoveItemFromInventory1() {
         inv.addItemToInventory(runeplatebody, 1);
         inv.addItemToInventory(claymore, 1);
         inv.getItemFromInventory(runeplatebody);
@@ -127,7 +127,7 @@ public class InventoryTest {
     }
 
     @Test
-    public void printInventory() {
+    public void printInventory1() {
         inv.setCurrentWeapon(deldrimorGreatsword);
         inv.setCurrentArmor(runeplatebody);
         inv.addItemToInventory(runeplatebody, 1);
@@ -141,18 +141,6 @@ public class InventoryTest {
         inv.fixCurrencyInPouch();
 
         System.out.println(inv.toString());
-    }
-
-    @Test
-    public void testAddItemToInventory() {
-        inv.addItemToInventory(runeplatebody, 1);
-        inv.addItemToInventory(claymore, 1);
-
-        LOGGER.info("\n" + inv.getSize());
-
-        String retrievedItem = inv.getItemFromInventory(runeplatebody).toString();
-        String expected = "Rune Platebody";
-        Assert.assertEquals(expected, retrievedItem);
     }
 
     @Test

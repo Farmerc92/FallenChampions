@@ -1,10 +1,11 @@
 package npc.monster;
 
+import interfaces.Drops;
 import npc.monster.drops.*;
 
 import java.util.Random;
 
-public class Imp extends Monster implements Dropable {
+public class Imp extends Monster implements Drops {
     WhiteBead whiteBead = new WhiteBead();
     RedBead redBead = new RedBead();
     BlackBead blackBead = new BlackBead();
@@ -28,7 +29,7 @@ public class Imp extends Monster implements Dropable {
     }
 
     @Override
-    public void addToLootTable() {
+    public void drop() {
         int roll = random.nextInt(100);
         if (roll <= 25){
             whiteBead.addToLootTable();
@@ -39,7 +40,7 @@ public class Imp extends Monster implements Dropable {
         if (roll > 50 && roll <= 75){
             blackBead.addToLootTable();
         }
-        else {
+        else if (roll > 75){
             yellowBead.addToLootTable();
         }
     }
