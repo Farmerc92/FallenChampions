@@ -39,8 +39,8 @@ public class CoinPouch {
 
     public void fixCopper() {
         if (mapOfCoin.get(copperCoin) > 99) {
-            Integer copperResult = mapOfCoin.get(copperCoin) / 100;
-            Integer leftOverCopper = mapOfCoin.get(copperCoin) - (100 * copperResult);
+            int copperResult = mapOfCoin.get(copperCoin) / 100;
+            int leftOverCopper = mapOfCoin.get(copperCoin) - (100 * copperResult);
             mapOfCoin.replace(silverCoin, copperResult + mapOfCoin.get(silverCoin));
             mapOfCoin.replace(copperCoin, leftOverCopper);
         }
@@ -48,8 +48,8 @@ public class CoinPouch {
 
     public void fixSilver() {
         if (mapOfCoin.get(silverCoin) > 99) {
-            Integer silverResult = mapOfCoin.get(silverCoin) / 100;
-            Integer leftOverSilver = mapOfCoin.get(silverCoin) - (100 * silverResult);
+            int silverResult = mapOfCoin.get(silverCoin) / 100;
+            int leftOverSilver = mapOfCoin.get(silverCoin) - (100 * silverResult);
             mapOfCoin.replace(goldCoin, silverResult + mapOfCoin.get(goldCoin));
             mapOfCoin.replace(silverCoin, leftOverSilver);
         }

@@ -1,14 +1,12 @@
 package player;
 
+import Money.Coin;
+import Money.CoinPouch;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import player.armors.Armor;
-import player.armors.Chestplate;
-import player.armors.ObsidianRobes;
-import player.armors.RunePlateBody;
+import player.armors.*;
 import player.weapons.*;
-
 import java.util.logging.Logger;
 
 public class InventoryTest {
@@ -16,74 +14,90 @@ public class InventoryTest {
     private static final Logger LOGGER = Logger.getLogger(InventoryTest.class.getName());
 
 
-    Inventory<Object> inv;
+    Inventory inv;
 
-    Weapon weapon;
-    Weapon claymore;
-    Weapon deldrimorGreatsword;
-    Weapon dsr;
+    CoinPouch coinPouch;
+    Coin copper;
+    Coin silver;
+    Coin gold;
 
-    Armor armor;
-    Armor runeplatebody;
-    Armor obbyRobes;
+    Weapons bow;
+    Weapons claymore;
+    Weapons deldrimorGreatsword;
+    Weapons dsr;
+    Weapons longsword;
+    Weapons fists;
+
+    Armors chestplate;
+    Armors runeplatebody;
+    Armors obbyRobes;
+    Armors shirt;
 
     @Before
     public void setup() {
-        inv = new Inventory<>();
+        inv = new Inventory();
 
-        weapon = new Longsword();
-        claymore = new Claymore();
-        deldrimorGreatsword = new DeldrimorGreatSword();
-        dsr = new DhuumsSoulReaper();
+        coinPouch = new CoinPouch();
+        copper = Coin.COPPER;
+        silver = Coin.SILVER;
+        gold = Coin.GOLD;
 
-        armor = new Chestplate();
-        obbyRobes = new ObsidianRobes();
-        runeplatebody = new RunePlateBody();
+        bow = Weapons.SHORTBOW;
+        claymore = Weapons.CLAYMORE;
+        longsword = Weapons.LONGSWORD;
+        deldrimorGreatsword = Weapons.DELDRIMOREGREATSWORD;
+        dsr = Weapons.DHUUMSSOULREAPER;
+        fists = Weapons.FISTS;
 
-
+        chestplate = Armors.CHESTPLATE;
+        obbyRobes = Armors.OBSIDIANROBES;
+        runeplatebody = Armors.RUNEPLATEBODY;
+        shirt = Armors.SHIRT;
     }
 
     @Test
     public void testInventoryConstructor() {
-        int armorSize = inv.getArmorList().size();
-        int weaponSize = inv.getWeaponList().size();
-
-        Assert.assertEquals(0,armorSize);
-        Assert.assertEquals(0,weaponSize);
+        Assert.assertEquals(Weapons.FISTS, inv.getCurrentWeapon());
+        Assert.assertEquals(Armors.SHIRT, inv.getCurrentArmor());
     }
 
     @Test
-    public void testAddWeapon() {
-        inv.addWeaponToWeaponSlot(weapon);
-        int weaponSize = inv.getWeaponList().size();
+    public void testSetWeapon() {
+        inv.addItemToInventory(bow, 5);
+        inv.setCurrentWeapon(bow);
 
-        Assert.assertEquals(1, weaponSize);
+        System.out.println(inv.toString());
+
+        Assert.assertEquals(bow, inv.getCurrentWeapon());
+        Assert.assertEquals(4, inv.getNumberOfItems(bow));
     }
 
     @Test
-    public void testAddArmor() {
-        inv.addArmorToArmorSlot(armor);
-        int armorSize = inv.getArmorList().size();
+    public void testSetArmor() {
+        inv.addItemToInventory(chestplate, 15);
+        inv.setCurrentArmor(chestplate);
 
-        Assert.assertEquals(1, armorSize);
+        System.out.println(inv.toString());
+
+        Assert.assertEquals(chestplate, inv.getCurrentArmor());
+        Assert.assertEquals(14, inv.getNumberOfItems(chestplate));
     }
 
     @Test
     public void testRemoveWeapon() {
-        inv.addWeaponToWeaponSlot(weapon);
-        inv.removeWeaponFromWeaponSlot(weapon);
-        int weaponSize = inv.getWeaponList().size();
+        inv.setCurrentWeapon(bow);
+        inv.setCurrentWeapon(fists);
 
-        Assert.assertEquals(1, weaponSize);
+
+        Assert.assertEquals(fists, inv.getCurrentWeapon());
     }
 
     @Test
     public void testRemoveArmor() {
-        inv.addArmorToArmorSlot(armor);
-        inv.removeArmorFromArmorSlot(armor);
-        int armorSize = inv.getArmorList().size();
+        inv.setCurrentArmor(chestplate);
+        inv.setCurrentArmor(shirt);
 
-        Assert.assertEquals(0, armorSize);
+        Assert.assertEquals(shirt, inv.getCurrentArmor());
     }
 
     @Test
@@ -93,9 +107,11 @@ public class InventoryTest {
 
         LOGGER.info("\n" + inv.getSize());
 
-        String retrievedItem = inv.getItemFromInventory(runeplatebody).toString();
-        String expected = "Rune Platebody";
-        Assert.assertEquals(expected, retrievedItem);
+        Managable retrievedItem = inv.getItemFromInventory(runeplatebody);
+        Managable retrievedWeapon = inv.getItemFromInventory(claymore);
+
+        Assert.assertEquals(runeplatebody, retrievedItem);
+        Assert.assertEquals(claymore, retrievedWeapon);
     }
 
     @Test
@@ -112,13 +128,18 @@ public class InventoryTest {
 
     @Test
     public void printInventory() {
+        inv.setCurrentWeapon(deldrimorGreatsword);
+        inv.setCurrentArmor(runeplatebody);
         inv.addItemToInventory(runeplatebody, 1);
         inv.addItemToInventory(claymore, 1);
         inv.addItemToInventory(deldrimorGreatsword, 1);
         inv.addItemToInventory(obbyRobes, 2);
         inv.addItemToInventory(dsr, 1);
+        inv.addCurrencyToPouch(copper, 20);
+        inv.addCurrencyToPouch(silver, 115);
+        inv.addCurrencyToPouch(gold, 28);
+        inv.fixCurrencyInPouch();
 
         System.out.println(inv.toString());
     }
-
 }
