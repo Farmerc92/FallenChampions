@@ -7,12 +7,12 @@ import org.junit.Before;
 import org.junit.Test;
 import player.armors.*;
 import player.weapons.*;
-
 import java.util.logging.Logger;
 
 public class InventoryTest {
 
     private static final Logger LOGGER = Logger.getLogger(InventoryTest.class.getName());
+
 
     Inventory inv;
 
@@ -70,7 +70,6 @@ public class InventoryTest {
 
         Assert.assertEquals(bow, inv.getCurrentWeapon());
         Assert.assertEquals(4, inv.getNumberOfItems(bow));
-
     }
 
     @Test
@@ -140,6 +139,41 @@ public class InventoryTest {
         inv.addCurrencyToPouch(silver, 115);
         inv.addCurrencyToPouch(gold, 28);
         inv.fixCurrencyInPouch();
+
+        System.out.println(inv.toString());
+    }
+
+    @Test
+    public void testAddItemToInventory() {
+        inv.addItemToInventory(runeplatebody, 1);
+        inv.addItemToInventory(claymore, 1);
+
+        LOGGER.info("\n" + inv.getSize());
+
+        String retrievedItem = inv.getItemFromInventory(runeplatebody).toString();
+        String expected = "Rune Platebody";
+        Assert.assertEquals(expected, retrievedItem);
+    }
+
+    @Test
+    public void testRemoveItemFromInventory() {
+        inv.addItemToInventory(runeplatebody, 1);
+        inv.addItemToInventory(claymore, 1);
+        inv.getItemFromInventory(runeplatebody);
+
+        int expectedSize = 1;
+        int actualSize = inv.getSize();
+
+        Assert.assertEquals(expectedSize, actualSize);
+    }
+
+    @Test
+    public void printInventory() {
+        inv.addItemToInventory(runeplatebody, 1);
+        inv.addItemToInventory(claymore, 1);
+        inv.addItemToInventory(deldrimorGreatsword, 1);
+        inv.addItemToInventory(obbyRobes, 2);
+        inv.addItemToInventory(dsr, 1);
 
         System.out.println(inv.toString());
     }
