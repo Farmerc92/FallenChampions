@@ -6,7 +6,7 @@ public enum Coin{
     SILVER(1),
     COPPER(1);
 
-    int value;
+    private final int value;
 
     Coin (int newValue) {
         this.value = newValue;
@@ -16,7 +16,4 @@ public enum Coin{
         return value;
     }
 
-    public void setValue(int value) {
-        this.value = value;
-    }
 }

@@ -1,83 +1,80 @@
 package player;
 
-import interfaces.Value;
 import org.junit.Assert;
 import org.junit.Test;
 import player.weapons.*;
 
 public class WeaponsTest {
 
-    Weapon shortsword = new Shortsword();
-    Weapon longsword = new Longsword();
-    Weapon deldrimorGreatSword = new DeldrimorGreatSword();
-    Weapon claymore = new Claymore();
-    Weapon crossbow = new Crossbow();
-    Weapon dhuumsSoulReaper = new DhuumsSoulReaper();
-    Weapon mace = new Mace();
-    Weapon shortbow = new Shortbow();
-    Weapon staff = new Staff();
+    Weapons shortsword = Weapons.SHORTSWORD;
+    Weapons longsword = Weapons.LONGSWORD;
+    Weapons deldrimorGreatSword = Weapons.DELDRIMOREGREATSWORD;
+    Weapons claymore = Weapons.CLAYMORE;
+    Weapons crossbow = Weapons.CROSSBOW;
+    Weapons dhuumsSoulReaper = Weapons.DHUUMSSOULREAPER;
+    Weapons mace = Weapons.MACE;
+    Weapons shortbow = Weapons.SHORTBOW;
+    Weapons staff = Weapons.STAFF;
+    Weapons fists = Weapons.FISTS;
 
     @Test
     public void testShortsword() {
-        Assert.assertEquals("Shortsword", shortsword.toString());
-        Assert.assertTrue(shortsword instanceof Weapon);
-        Assert.assertTrue(shortsword instanceof Value);
+        Assert.assertEquals("Shortsword", shortsword.getName());
+        Assert.assertEquals(2, shortsword.getAttackPower());
     }
 
     @Test
     public void testLongsword() {
-        Assert.assertEquals("Longsword", longsword.toString());
-        Assert.assertTrue(longsword instanceof Weapon);
-        Assert.assertTrue(longsword instanceof Value);
+        Assert.assertEquals("Longsword", longsword.getName());
+        Assert.assertEquals(2, longsword.getAttackPower());
     }
 
     @Test
     public void testDelDrimoreGreatSword() {
-        Assert.assertEquals("Deldrimor Greatsword", deldrimorGreatSword.toString());
-        Assert.assertTrue(deldrimorGreatSword instanceof Weapon);
-        Assert.assertTrue(deldrimorGreatSword instanceof Value);
+        Assert.assertEquals("Deldrimor Greatsword", deldrimorGreatSword.getName());
+        Assert.assertEquals(25, deldrimorGreatSword.getAttackPower());
     }
 
     @Test
     public void testClaymore() {
-        Assert.assertEquals("Claymore", claymore.toString());
-        Assert.assertTrue(claymore instanceof Weapon);
-        Assert.assertTrue(claymore instanceof Value);
+        Assert.assertEquals("Claymore", claymore.getName());
+        Assert.assertEquals(2, claymore.getAttackPower());
     }
 
     @Test
     public void testCrossbow() {
-        Assert.assertEquals("Crossbow", crossbow.toString());
-        Assert.assertTrue(crossbow instanceof Weapon);
-        Assert.assertTrue(crossbow instanceof Value);
+        Assert.assertEquals("Crossbow", crossbow.getName());
+        Assert.assertEquals(1, crossbow.getAttackPower());
     }
 
     @Test
     public void testDhuumsSoulreaper() {
-        Assert.assertEquals("Dhuum's Soul Reaper", dhuumsSoulReaper.toString());
-        Assert.assertTrue(dhuumsSoulReaper instanceof Weapon);
-        Assert.assertTrue(dhuumsSoulReaper instanceof Value);
+        Assert.assertEquals("Dhuum's Soul Reaper", dhuumsSoulReaper.getName());
+        Assert.assertEquals(2, dhuumsSoulReaper.getAttackPower());
     }
 
     @Test
     public void testMace() {
-        Assert.assertEquals("Mace", mace.toString());
-        Assert.assertTrue(mace instanceof Weapon);
-        Assert.assertTrue(mace instanceof Value);
+        Assert.assertEquals("Mace", mace.getName());
+        Assert.assertEquals(2, mace.getAttackPower());
     }
 
     @Test
     public void testShortbow() {
-        Assert.assertEquals("Shortbow", shortbow.toString());
-        Assert.assertTrue(shortbow instanceof Weapon);
-        Assert.assertTrue(shortbow instanceof Value);
+        Assert.assertEquals("Shortbow", shortbow.getName());
+        Assert.assertEquals(2, shortbow.getAttackPower());
     }
 
     @Test
     public void testStaff() {
-        Assert.assertEquals("Staff", staff.toString());
-        Assert.assertTrue(staff instanceof Weapon);
-        Assert.assertTrue(staff instanceof Value);
+        Assert.assertEquals("Staff", staff.getName());
+        Assert.assertEquals(2, staff.getAttackPower());
+    }
+
+    @Test
+    public void testFists() {
+        Assert.assertEquals("Fists", fists.getName());
+        Assert.assertEquals(1, fists.getAttackPower());
     }
 
 }
