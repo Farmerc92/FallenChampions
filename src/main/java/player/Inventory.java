@@ -68,10 +68,6 @@ public class Inventory {
         }
     }
 
-    public Map<player.Managable, Integer> getInventoryItems() {
-        return inventoryItems;
-    }
-
     public void addItemToInventory(Managable itemToAdd, Integer numberOfItems) {
         inventoryItems.put(itemToAdd, numberOfItems);
     }
