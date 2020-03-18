@@ -1,5 +1,6 @@
 package npc.monster;
 
+import npc.monster.drops.Item;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -32,5 +33,15 @@ public class CactuarTest {
         int actual = cactuar.getXpDrop();
 
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDrop(){
+        Cactuar cactuar = new Cactuar(40, 3);
+        cactuar.drop();
+        int expected = 1;
+
+        Assert.assertEquals(expected, Item.dropTable.size());
+
     }
 }

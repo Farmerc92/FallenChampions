@@ -1,5 +1,6 @@
 package npc.monster;
 
+import npc.monster.drops.Item;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -33,4 +34,13 @@ public class DjiinTest {
 
         Assert.assertEquals(expected, actual);
     }
+//    @Test
+//    public void testDrop(){
+//        Djiin djiin = new Djiin(40, 3);
+//        djiin.drop();
+//        int expected = 1;
+//
+//        Assert.assertEquals(expected, Item.dropTable.size());
+//
+//    }
 }

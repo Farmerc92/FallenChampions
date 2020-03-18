@@ -48,6 +48,7 @@ public class BanditTest {
 //    public void testDrop(){
 //        CoinPouch coinPouch = new CoinPouch();
 //        Bandit bandit = new Bandit(15, 3);
+//        int expected = 15;
 //        bandit.drop();
 //        Assert.assertEquals(, coinPouch.getCopper());
 //

@@ -29,9 +29,11 @@ public class Basilisk extends Monster implements Drops {
 
     @Override
     public void drop() {
-        if ( random.nextInt(100) < 50){
+        int roll = random.nextInt(100);
+        if ( roll < 50){
             basiliskEye.addToLootTable();
-        } else {
+        }
+        if (roll >= 50){
             basiliskScale.addToLootTable();
         }
     }

@@ -1,7 +1,10 @@
 package npc.monster;
 
+import npc.monster.drops.Item;
 import org.junit.Assert;
 import org.junit.Test;
+
+import javax.swing.*;
 
 public class SlimeTest {
 //    @Test
@@ -32,5 +35,15 @@ public class SlimeTest {
         int actual = slime.getXpDrop();
 
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDrop(){
+        Slime slime = new Slime(8, 3);
+        slime.drop();
+        int expected = 1;
+
+        Assert.assertEquals(expected, Item.dropTable.size());
+
     }
 }
