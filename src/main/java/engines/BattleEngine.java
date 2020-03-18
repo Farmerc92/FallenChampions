@@ -83,4 +83,16 @@ public class BattleEngine {
         }
         return false;
     }
+
+    public void rewardExp(){
+
+    }
+
+    public void rewardMoney(){
+
+    }
+
+    public void drops(){
+
+    }
 }
