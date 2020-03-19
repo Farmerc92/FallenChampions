@@ -3,7 +3,7 @@ package npc.monster.drops;
 public class RedBead extends Item implements Dropable {
     @Override
     public int value() {
-        return 0;
+        return 25;
     }
 
     @Override
